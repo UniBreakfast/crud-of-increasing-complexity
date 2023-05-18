@@ -146,4 +146,19 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
 ```
 
-## 
+## What's next?
+
+- [add some CRUD functions](../0001-with-functions)
+- add CRUD methods
+- add persistency
+- add UI
+- add CLI
+- scale up
+- add ids
+- add validation
+- make client-server
+- add API
+- add database
+- store to files
+  
+... the possibilities are endless

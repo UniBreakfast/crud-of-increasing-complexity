@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is a collection of progressively more complex CRUD implementations. There are countless directions to go from the simplest implementation. I will try to explore some of them. I will try to keep the implementations as simple as possible, adding only one or two new concepts at a time. The simplest one for me is in the `simplest-for-me` directory.
+This is a collection of progressively more complex CRUD implementations. There are countless directions to go from the simplest implementation. I will try to explore some of them. I will try to keep the implementations as simple as possible, adding only one or two new concepts at a time. The simplest one for me is in the [`simplest-for-me`](simplest-for-me) directory.
 
 ## What is CRUD?
 

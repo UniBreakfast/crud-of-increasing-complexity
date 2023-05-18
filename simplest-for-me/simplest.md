@@ -1,8 +1,10 @@
-# The simples CRUD implementation for me
+# The simplest CRUD implementation for me
 
 ## What is this?
 
 This is the simplest CRUD implementation details for me. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+
+Here is an [interactive notebook](http://runkit.com/unibreakfast/the-simples-crud-implementation-for-me) to check it online.
 
 ## What is CRUD?
 
@@ -63,6 +65,13 @@ or I can do it in one line
 records[records.indexOf('record 3 text')] = 'record 3 text updated' // 'record 3 text updated'
 ```
 
+But be careful, because `Array.prototype.indexOf` method returns `-1` if the element is not found in the array. So if you try to update a string that is not in the array, you will add or change the property with the key of `-1` instead. So you need to check if the index is not `-1` before updating the element if you are not sure if the string is in the array.
+
+```js
+index = records.indexOf('record 5 text') // -1
+if (index !== -1) records[index] = 'record 5 text updated' // do nothing
+```
+
 ### Delete (one)
 
 To delete a string from the array, I need to remove the element at the index of the string I want to delete. I can use `Array.prototype.splice` method to remove the element at the index. I can use `Array.prototype.indexOf` method to get the index of the string I want to delete.
@@ -76,6 +85,13 @@ or again I can do it in one line
 
 ```js
 records.splice(records.indexOf('record 2 text updated'), 1) // ['record 2 text updated']
+```
+
+But be careful, because `Array.prototype.indexOf` method returns `-1` if the element is not found in the array. So if you try to delete a string that is not in the array, you will delete the last element in the array instead. So you need to check if the index is not `-1` before deleting the element if you are not sure if the string is in the array.
+
+```js
+index = records.indexOf('record 5 text') // -1
+if (index !== -1) records.splice(index, 1) // do nothing
 ```
 
 ## Testing
@@ -129,3 +145,5 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 ```js
 'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
 ```
+
+## 

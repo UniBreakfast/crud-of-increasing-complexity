@@ -4,7 +4,7 @@
 
 This is the simplest CRUD implementation details for me. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
-Here is an [interactive notebook](http://runkit.com/unibreakfast/the-simples-crud-implementation-for-me) to check it online.
+Here is a simple [interactive RunKit notebook](http://runkit.com/unibreakfast/the-simples-crud-implementation-for-me) to check it online. Or a more powerful [interactive notebook at ObservableHQ](https://observablehq.com/d/ec0fd525575c2c9b) (but be aware that independent code evaluation opens the way for errors).
 
 ## What is CRUD?
 
@@ -29,7 +29,7 @@ Yep, that's it. That's the simplest implementation for me. It's an empty array. 
 
 ## How to perform CRUD operations?
 
-There's no UI in this simplest implementation, so we'll have to use some kind of JavaScript REPL here. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code for our runtime of choice to evaluate it.
+There's no UI in this simplest implementation, so we'll have to use some kind of JavaScript REPL here. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
 
 ### Create (one)
 

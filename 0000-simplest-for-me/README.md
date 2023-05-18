@@ -96,7 +96,8 @@ if (index !== -1) records.splice(index, 1) // do nothing
 
 ## Testing
 
-To test these examples you can copy, paste into your REPL of choice and evaluate this code:
+<details>
+  <summary>To test these examples you can copy, paste into your REPL of choice and evaluate this code:</summary>
 
 ```js
 console.log('// Implementation initialization')
@@ -149,7 +150,8 @@ console.log(records)
 // (2) ['record 1 text', 'record 3 text updated']
 ```
 
-And you can compare the actual output with the expected output in the comments.
+And then you can compare the actual output with the expected output in the comments.
+</details><br>
 
 ## Persistency of data
 

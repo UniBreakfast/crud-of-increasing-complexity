@@ -79,46 +79,48 @@ function deleteOneRecord(str) {
 
 ## Testing
 
-To test these examples you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:
-
-```js
-console.log("createOneRecord('record 1 text')")
-createOneRecord('record 1 text')
-console.log("createOneRecord('record 2 text')")
-createOneRecord('record 2 text')
-console.log("createOneRecord('record 3 text')")
-createOneRecord('record 3 text')
-console.log("createOneRecord('record 4 text')")
-createOneRecord('record 4 text')
-
-console.log('readAllRecords()')
-console.log(readAllRecords())
-// (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
-
-console.log("updateOneRecord('record 2 text', 'record 2 text updated')")
-updateOneRecord('record 2 text', 'record 2 text updated')
-console.log("updateOneRecord('record 3 text', 'record 3 text updated')")
-updateOneRecord('record 3 text', 'record 3 text updated')
-console.log("updateOneRecord('record 5 text', 'record 5 text updated')")
-updateOneRecord('record 5 text', 'record 5 text updated')
-
-console.log('readAllRecords()')
-console.log(readAllRecords())
-// (4) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
-
-console.log("deleteOneRecord('record 4 text')")
-deleteOneRecord('record 4 text')
-console.log("deleteOneRecord('record 2 text updated')")
-deleteOneRecord('record 2 text updated')
-console.log("deleteOneRecord('record 5 text')")
-deleteOneRecord('record 5 text')
-
-console.log('readAllRecords()')
-console.log(readAllRecords())
-// (2) ['record 1 text', 'record 3 text updated']
-```
-
-And you can compare the actual output with the expected output in the comments.
+<details>
+  <summary>To test these examples you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary>
+  
+  ```js
+  console.log("createOneRecord('record 1 text')")
+  createOneRecord('record 1 text')
+  console.log("createOneRecord('record 2 text')")
+  createOneRecord('record 2 text')
+  console.log("createOneRecord('record 3 text')")
+  createOneRecord('record 3 text')
+  console.log("createOneRecord('record 4 text')")
+  createOneRecord('record 4 text')
+  
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
+  
+  console.log("updateOneRecord('record 2 text', 'record 2 text updated')")
+  updateOneRecord('record 2 text', 'record 2 text updated')
+  console.log("updateOneRecord('record 3 text', 'record 3 text updated')")
+  updateOneRecord('record 3 text', 'record 3 text updated')
+  console.log("updateOneRecord('record 5 text', 'record 5 text updated')")
+  updateOneRecord('record 5 text', 'record 5 text updated')
+  
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (4) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
+  
+  console.log("deleteOneRecord('record 4 text')")
+  deleteOneRecord('record 4 text')
+  console.log("deleteOneRecord('record 2 text updated')")
+  deleteOneRecord('record 2 text updated')
+  console.log("deleteOneRecord('record 5 text')")
+  deleteOneRecord('record 5 text')
+  
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (2) ['record 1 text', 'record 3 text updated']
+  ```
+  
+  And then you can compare the actual output with the expected output in the comments.
+</details><br>
 
 ## What's next?
 

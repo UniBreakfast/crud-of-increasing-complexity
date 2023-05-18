@@ -20,18 +20,10 @@ I will not implement any other operations, like read individual items or delete 
 The simplest implementation for me is the one that is easy to understand and easy to use. It's not necessarily the one that is the fastest, safest or the most efficient. It's the one that is the most straightforward and easy to use for me. It's the one that I can easily remember and use without having to look up the documentation. It's the one that I can easily explain to someone else. It's the one that I can easily modify to add new features.
 
 ```js
-records = []
-```
-
-Yep, that's it. That's the simplest implementation for me. It's an empty array. It's easy to understand, easy to use, easy to remember, easy to explain and easy to modify. I omit the `const`, `let` or `var` keywords here for simplicity. I don't need them here, because I'm not going to use this code in any real application so I don't care about it being global. If your REPL of choice is in strict mode by default, add any of these keywords to the beginning of the line.
-
-```js
-const records = []
-// or
-let records = []
-// or
 var records = []
 ```
+
+Yep, that's it. That's the simplest implementation for me. It's an empty array. It's easy to understand, easy to use, easy to remember, easy to explain and easy to modify.
 
 ## How to perform CRUD operations?
 
@@ -44,6 +36,8 @@ To create a new string in the array, I need to add it to the end of the array. I
 ```js
 records.push('record 1 text') // 1
 records.push('record 2 text') // 2
+records.push('record 3 text') // 3
+records.push('record 4 text') // 4
 ```
 
 ### Read (all)
@@ -51,7 +45,7 @@ records.push('record 2 text') // 2
 To read all strings from the array, I can simply ask for the array itself. I can use `console.log` to print it to the console. But I'm already in the console, so I can just type the name of the array and press Enter to see its contents.
 
 ```js
-records // ['record 1 text', 'record 2 text']
+records // ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
 ```
 
 ### Update (one)
@@ -66,7 +60,7 @@ records[index] = 'record 2 text updated' // 'record 2 text updated'
 or I can do it in one line
 
 ```js
-records[records.indexOf('record 1 text')] = 'record 1 text updated' // 'record 2 text updated'
+records[records.indexOf('record 3 text')] = 'record 3 text updated' // 'record 3 text updated'
 ```
 
 ### Delete (one)
@@ -74,14 +68,14 @@ records[records.indexOf('record 1 text')] = 'record 1 text updated' // 'record 2
 To delete a string from the array, I need to remove the element at the index of the string I want to delete. I can use `Array.prototype.splice` method to remove the element at the index. I can use `Array.prototype.indexOf` method to get the index of the string I want to delete.
 
 ```js
-index = records.indexOf('record 2 text updated') // 1
-records.splice(index, 1) // ['record 2 text updated']
+index = records.indexOf('record 4 text') // 3
+records.splice(index, 1) // ['record 4 text']
 ```
 
 or again I can do it in one line
 
 ```js
-records.splice(records.indexOf('record 1 text updated'), 1) // ['record 1 text updated']
+records.splice(records.indexOf('record 2 text updated'), 1) // ['record 2 text updated']
 ```
 
 ## Testing
@@ -98,6 +92,10 @@ console.log("records.push('record 1 text')")
 console.log(records.push('record 1 text'))
 console.log("records.push('record 2 text')")
 console.log(records.push('record 2 text'))
+console.log("records.push('record 3 text')")
+console.log(records.push('record 3 text'))
+console.log("records.push('record 4 text')")
+console.log(records.push('record 4 text'))
 
 console.log('// Read (all) example')
 console.log('records')
@@ -108,18 +106,26 @@ console.log("index = records.indexOf('record 2 text')")
 console.log(index = records.indexOf('record 2 text'))
 console.log("records[index] = 'record 2 text updated'")
 console.log(records[index] = 'record 2 text updated')
-console.log("records[records.indexOf('record 1 text')] = 'record 1 text updated'")
-console.log(records[records.indexOf('record 1 text')] = 'record 1 text updated')
+console.log("records[records.indexOf('record 3 text')] = 'record 3 text updated'")
+console.log(records[records.indexOf('record 3 text')] = 'record 3 text updated')
 console.log('records')
 console.log(records)
 
 console.log('// Delete (one) examples')
-console.log("index = records.indexOf('record 2 text updated')")
-console.log(index = records.indexOf('record 2 text updated'))
+console.log("index = records.indexOf('record 4 text')")
+console.log(index = records.indexOf('record 4 text'))
 console.log('records.splice(index, 1)')
 console.log(records.splice(index, 1))
-console.log("records.splice(records.indexOf('record 1 text updated'), 1)")
-console.log(records.splice(records.indexOf('record 1 text updated'), 1))
+console.log("records.splice(records.indexOf('record 2 text updated'), 1)")
+console.log(records.splice(records.indexOf('record 2 text updated'), 1))
 console.log('records')
 console.log(records)
+```
+
+## Persistency of data
+
+This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
+
+```js
+'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
 ```

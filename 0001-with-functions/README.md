@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is the simplest CRUD implementation (for me) with functions. It is based on the [simplest implementation](../0000-simplest-for-me) and it adds four obvious functions to perform CRUD operations. If unsure start there.
+This is the simplest CRUD implementation (for me) with functions. It is based on the [simplest implementation](../0000-simplest-for-me) and it adds four obvious functions to perform CRUD operations. If unsure what to make of it start [there](../0000-simplest-for-me).
 
 ## How to use these?
 
@@ -51,7 +51,8 @@ deleteOneRecord('record 5 text')
 
 ## The implementation details
 
-On top of [previous implementation](../0000-simplest-for-me), this one adds four functions to perform CRUD operations.
+On top of [previous implementation](../0000-simplest-for-me), 
+<details><summary>this one adds four functions to perform CRUD operations.</summary>
 
 ```js
 var records = []
@@ -76,6 +77,8 @@ function deleteOneRecord(str) {
   if (i !== -1) records.splice(i, 1)
 }
 ```
+
+</details><br>
 
 ## Testing
 
@@ -124,7 +127,7 @@ function deleteOneRecord(str) {
 
 ## What's next?
 
-- add more CRUD functions
+- [add more CRUD functions](../0002-more-functions)
 - add CRUD methods
 - add persistency
 - add UI
@@ -132,9 +135,11 @@ function deleteOneRecord(str) {
 - scale up
 - add ids
 - add validation
+- add feedback
 - make client-server
 - add API
 - add database
 - store to files
+- remove direct access to records
   
 ... the possibilities are endless

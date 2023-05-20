@@ -163,7 +163,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
-- [add some CRUD functions](../0001-with-functions)
+- [add some CRUD functions](../0001-with-functions/README.md)
 - add CRUD methods
 - add persistency
 - add UI

@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is a simple CRUD implementation with more functions. It's a continuation of the [previous example](../0001-with-functions). It adds 8 more functions to perform CRUD operations to the 4 functions from the previous implementation. It is still in memory, so it's not persistent unless you save it manually by copying/pasting.
+This is a simple CRUD implementation with more functions. It's a continuation of the [previous example](../0001-with-functions/README.md). It adds 8 more functions to perform CRUD operations to the 4 functions from the previous implementation. It is still in memory, so it's not persistent unless you save it manually by copying/pasting.
 
 ## How to use new functions?
 

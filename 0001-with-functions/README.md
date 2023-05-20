@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is the simplest CRUD implementation (for me) with functions. It is based on the [simplest implementation](../0000-simplest-for-me) and it adds four obvious functions to perform CRUD operations. If unsure what to make of it start [there](../0000-simplest-for-me).
+This is the simplest CRUD implementation (for me) with functions. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) and it adds four obvious functions to perform CRUD operations. If unsure what to make of it start [there](../0000-simplest-for-me/README.md).
 
 ## How to use these?
 
@@ -51,7 +51,7 @@ deleteOneRecord('record 5 text')
 
 ## The implementation details
 
-On top of [previous implementation](../0000-simplest-for-me), 
+On top of [previous implementation](../0000-simplest-for-me/README.md), 
 <details><summary>this one adds four functions to perform CRUD operations.</summary>
 
 ```js
@@ -127,7 +127,7 @@ function deleteOneRecord(str) {
 
 ## What's next?
 
-- [add more CRUD functions](../0002-more-functions)
+- [add more CRUD functions](../0002-more-functions/README.md)
 - add CRUD methods
 - add persistency
 - add UI

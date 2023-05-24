@@ -127,19 +127,26 @@ function deleteOneRecord(str) {
 
 ## What's next?
 
-- [add more CRUD functions](../0002-more-functions/README.md)
-- add CRUD methods
-- add persistency
-- add UI
-- add CLI
-- scale up
-- add ids
-- add validation
-- add feedback
-- make client-server
-- add API
-- add database
-- store to files
-- remove direct access to records
-  
-... the possibilities are endless
+### Improve Functionality
+- [Add more CRUD functions](../0002-more-functions/README.md)
+- Add CRUD methods
+- Add validation
+- Remove direct access to records
+
+### Enhance Interaction
+- Add UI (think about which frameworks you might want to use)
+- Add CLI
+- Add feedback (consider different types of feedback, such as validation errors)
+
+### Enhance Data Management
+- Add persistency
+- Add ids to records
+- Store data to files
+- Introduce a database
+
+### Scale Up
+- Scale up the system (consider different scaling strategies)
+- Make it a client-server application
+- Add an API for communication between client and server
+
+... the possibilities are indeed endless!

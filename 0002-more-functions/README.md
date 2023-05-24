@@ -175,3 +175,89 @@ deleteAllRecords()
 </details><br>
 
 ## Testing
+
+<details>
+  <summary>To test the implementation you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary>
+
+  ```js
+  console.log("createOneRecord('record 1 text')")
+  createOneRecord('record 1 text')
+  console.log("createManyRecords('record 2 text', 'record 3 text', 'record 4 text')")
+  createManyRecords('record 2 text', 'record 3 text', 'record 4 text')
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
+
+  console.log("createAllRecords((i) => `record ${i+1} text`, 3)")
+  createAllRecords((i) => `record ${i+1} text`, 3)
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (7) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text', 'record 5 text', 'record 6 text', 'record 7 text']
+
+  console.log("readOneRecord(2)")
+  console.log(readOneRecord(2))
+  // 'record 3 text'
+
+  console.log("readManyRecords(3, 2)")
+  console.log(readManyRecords(3, 2))
+  // (2) ['record 4 text', 'record 5 text']
+
+  console.log("updateManyRecords(['record 2 text', 'record 2 text updated'], ['record 3 text', 'record 3 text updated'])")
+  updateManyRecords(['record 2 text', 'record 2 text updated'], ['record 3 text', 'record 3 text updated'])
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (7) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text', 'record 5 text', 'record 6 text', 'record 7 text']
+
+  console.log("updateAllRecords((str) => str.includes('updated') ? str : `${str} updated`)")
+  updateAllRecords((str) => str.includes('updated') ? str : `${str} updated`)
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (7) ['record 1 text updated', 'record 2 text updated', 'record 3 text updated', 'record 4 text updated', 'record 5 text updated', 'record 6 text updated', 'record 7 text updated']
+
+  console.log("deleteManyRecords('record 1 text updated', 'record 2 text updated')")
+  deleteManyRecords('record 1 text updated', 'record 2 text updated')
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // (5) ['record 3 text updated', 'record 4 text updated', 'record 5 text updated', 'record 6 text updated', 'record 7 text updated']
+
+  console.log("deleteAllRecords()")
+  deleteAllRecords()
+
+  console.log('readAllRecords()')
+  console.log(readAllRecords())
+  // []
+  ```
+  
+  And then you can compare the actual output with the expected output in the comments.
+</details><br>
+
+## What's next?
+
+### Improve Functionality
+- Add more utility functions
+- Switch to CRUD methods instead of functions
+- Add validation
+- Remove direct access to records
+
+### Enhance Interaction
+- Add UI (think about which frameworks you might want to use)
+- Add CLI
+- Add feedback (consider different types of feedback, such as validation errors)
+
+### Enhance Data Management
+- Add persistency
+- Add ids to records
+- Store data to files
+- Introduce a database
+
+### Scale Up
+- Scale up the system (consider different scaling strategies)
+- Make it a client-server application
+- Add an API for communication between client and server
+
+... the possibilities are indeed endless!

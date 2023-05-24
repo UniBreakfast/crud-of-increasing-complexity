@@ -2,9 +2,7 @@
 
 ## What is this?
 
-This is the simplest CRUD implementation details for me. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
-
-Here is a simple [interactive RunKit notebook](http://runkit.com/unibreakfast/the-simples-crud-implementation-for-me) to check it online. Or a more powerful [interactive notebook at ObservableHQ](https://observablehq.com/d/ec0fd525575c2c9b) (but be aware that independent code evaluation opens the way for errors).
+This is the simplest CRUD implementation for NodeJS REPL. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) which was not platform-specific. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 
@@ -22,6 +20,12 @@ I will not implement any other operations, like read individual items or delete 
 The simplest implementation for me is the one that is easy to understand and easy to use. It's not necessarily the one that is the fastest, safest or the most efficient. It's the one that is the most straightforward and easy to use for me. It's the one that I can easily remember and use without having to look up the documentation. It's the one that I can easily explain to someone else. It's the one that I can easily modify to add new features.
 
 ```js
+require('repl').start().context.records = []
+```
+
+This simply starts NodeJS REPL and adds an empty array to the context of the REPL. If you're not familiar with NodeJS REPL, you can think of it as a console where you can input JavaScript code and see the results of its evaluation. So it's basically the same as the following
+
+```js
 var records = []
 ```
 
@@ -29,7 +33,7 @@ Yep, that's it. That's the simplest implementation for me. It's an empty array. 
 
 ## How to perform CRUD operations?
 
-There's no UI in this simplest implementation, so we'll have to use some kind of JavaScript REPL here. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
+There's no UI in this simplest implementation, so we're using the NodeJS REPL here. I won't use anything NodeJS-specific here. So to perform CRUD operations we'll input JavaScript code in the comman line of NodeJS REPL.
 
 ### Create (one)
 
@@ -97,57 +101,36 @@ if (index !== -1) records.splice(index, 1) // do nothing
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy, paste into your REPL of choice and evaluate this code:</summary>
+  <summary>
+  To run this implementation you should have NodeJS installed. Run <code>node&nbsp;crud-in-repl</code> in your terminal to start NodeJS REPL.
+  To test these examples you can copy, paste into your REPL and evaluate this code:</summary>
 
 ```js
-console.log('// Implementation initialization')
-console.log('records = []')
+// Implementation initialization'
 records = []
 
-console.log('// Create (one) examples')
-console.log("records.push('record 1 text')")
-console.log(records.push('record 1 text'))
-// 1
-console.log("records.push('record 2 text')")
-console.log(records.push('record 2 text'))
-// 2
-console.log("records.push('record 3 text')")
-console.log(records.push('record 3 text'))
-// 3
-console.log("records.push('record 4 text')")
-console.log(records.push('record 4 text'))
-// 4
+// Create (one) examples
+records.push('record 1 text') // 1
+records.push('record 2 text') // 2
+records.push('record 3 text') // 3
+records.push('record 4 text') // 4
 
-console.log('// Read (all) example')
-console.log('records')
-console.log(records)
-// (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
+// Read (all) example
+records // ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
 
-console.log('// Update (one) examples')
-console.log("index = records.indexOf('record 2 text')")
-console.log(index = records.indexOf('record 2 text'))
-// 1
-console.log("records[index] = 'record 2 text updated'")
-console.log(records[index] = 'record 2 text updated')
-console.log("records[records.indexOf('record 3 text')] = 'record 3 text updated'")
-console.log(records[records.indexOf('record 3 text')] = 'record 3 text updated')
-console.log('records')
-console.log(records)
-// (4) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
+// Update (one) examples
+index = records.indexOf('record 2 text') // 1
+records[index] = 'record 2 text updated'
+records[records.indexOf('record 3 text')] = 'record 3 text updated'
 
-console.log('// Delete (one) examples')
-console.log("index = records.indexOf('record 4 text')")
-console.log(index = records.indexOf('record 4 text'))
-// 3
-console.log('records.splice(index, 1)')
-console.log(records.splice(index, 1))
-// ['record 4 text']
-console.log("records.splice(records.indexOf('record 2 text updated'), 1)")
-console.log(records.splice(records.indexOf('record 2 text updated'), 1))
-// ['record 2 text updated']
-console.log('records')
-console.log(records)
-// (2) ['record 1 text', 'record 3 text updated']
+records // ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
+
+// Delete (one) examples
+index = records.indexOf('record 4 text') // 3
+records.splice(index, 1) // ['record 4 text']
+records.splice(records.indexOf('record 2 text updated'), 1) // ['record 2 text updated']
+
+records // ['record 1 text', 'record 3 text updated']
 ```
 
 And then you can compare the actual output with the expected output in the comments.
@@ -163,8 +146,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
-- [add some CRUD functions](../0001-with-functions/README.md)
-- [settle with NodeJS REPL](../0003-simplest-nodejs-repl/README.md)
+- add some CRUD functions
 - add CRUD methods
 - add persistency
 - add UI

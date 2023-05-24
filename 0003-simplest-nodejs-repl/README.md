@@ -1,4 +1,4 @@
-# The simplest CRUD implementation for me
+# The simplest CRUD implementation in NodeJS REPL
 
 ## What is this?
 

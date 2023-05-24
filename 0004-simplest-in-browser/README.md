@@ -1,10 +1,8 @@
-# The simplest CRUD implementation for me
+# The simplest CRUD implementation in the browser
 
 ## What is this?
 
-This is the simplest CRUD implementation details for me. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
-
-Here is a simple [interactive RunKit notebook](http://runkit.com/unibreakfast/the-simples-crud-implementation-for-me) to check it online. Or a more powerful [interactive notebook at ObservableHQ](https://observablehq.com/d/ec0fd525575c2c9b) (but be aware that independent code evaluation opens the way for errors).
+This is the simplest CRUD implementation for JavaScript in a browser. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) which was not platform-specific. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 
@@ -21,15 +19,15 @@ I will not implement any other operations, like read individual items or delete 
 
 The simplest implementation for me is the one that is easy to understand and easy to use. It's not necessarily the one that is the fastest, safest or the most efficient. It's the one that is the most straightforward and easy to use for me. It's the one that I can easily remember and use without having to look up the documentation. It's the one that I can easily explain to someone else. It's the one that I can easily modify to add new features.
 
-```js
-var records = []
+```html
+<script>var records = [];</script>
 ```
 
-Yep, that's it. That's the simplest implementation for me. It's an empty array. It's easy to understand, easy to use, easy to remember, easy to explain and easy to modify.
+Yep, that's it. That's the simplest implementation for me. It's a script tag with an empty array. It's easy to understand, easy to use, easy to remember, easy to explain and easy to modify. I allow myself to omit the rest of the HTML document for the sake of simplicity. Browser will not complain about it.
 
 ## How to perform CRUD operations?
 
-There's no UI in this simplest implementation, so we'll have to use some kind of JavaScript REPL here. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
+There's no UI in this simplest implementation, so we'll have to use a browser console. I personally prefer Chrome DevTools console, but I won't use anything Chrome specific here. So to perform CRUD operations we'll input JavaScript code to our console to evaluate it.
 
 ### Create (one)
 
@@ -97,7 +95,7 @@ if (index !== -1) records.splice(index, 1) // do nothing
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy, paste into your REPL of choice and evaluate this code:</summary>
+  <summary>To test these examples you can copy, paste into your Developer Tools console and evaluate this code:</summary>
 
 ```js
 console.log('// Implementation initialization')
@@ -163,13 +161,10 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
-- [add some CRUD functions](../0001-with-functions/README.md)
-- [settle with NodeJS REPL](../0003-simplest-nodejs-repl/README.md)
-- [settle with Browser](../0004-simplest-in-browser/README.md)
+- add some CRUD functions
 - add CRUD methods
 - add persistency
 - add UI
-- add CLI
 - scale up
 - add ids
 - add validation

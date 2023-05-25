@@ -98,55 +98,55 @@ if (index !== -1) records.splice(index, 1) // do nothing
   <summary>To test these examples you can copy, paste into your Developer Tools console and evaluate this code:</summary>
 
 ```js
-console.log('// Implementation initialization')
-console.log('records = []')
-records = []
+  console.log('// Implementation initialization')
+  console.log('records = []')
+  records = []
 
-console.log('// Create (one) examples')
-console.log("records.push('record 1 text')")
-console.log(records.push('record 1 text'))
-// 1
-console.log("records.push('record 2 text')")
-console.log(records.push('record 2 text'))
-// 2
-console.log("records.push('record 3 text')")
-console.log(records.push('record 3 text'))
-// 3
-console.log("records.push('record 4 text')")
-console.log(records.push('record 4 text'))
-// 4
+  console.log('// Create (one) examples')
+  console.log("records.push('record 1 text')")
+  console.log(records.push('record 1 text'))
+  // 1
+  console.log("records.push('record 2 text')")
+  console.log(records.push('record 2 text'))
+  // 2
+  console.log("records.push('record 3 text')")
+  console.log(records.push('record 3 text'))
+  // 3
+  console.log("records.push('record 4 text')")
+  console.log(records.push('record 4 text'))
+  // 4
 
-console.log('// Read (all) example')
-console.log('records')
-console.log(records)
-// (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
+  console.log('// Read (all) example')
+  console.log('records')
+  console.log(records)
+  // (4) ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
 
-console.log('// Update (one) examples')
-console.log("index = records.indexOf('record 2 text')")
-console.log(index = records.indexOf('record 2 text'))
-// 1
-console.log("records[index] = 'record 2 text updated'")
-console.log(records[index] = 'record 2 text updated')
-console.log("records[records.indexOf('record 3 text')] = 'record 3 text updated'")
-console.log(records[records.indexOf('record 3 text')] = 'record 3 text updated')
-console.log('records')
-console.log(records)
-// (4) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
+  console.log('// Update (one) examples')
+  console.log("index = records.indexOf('record 2 text')")
+  console.log(index = records.indexOf('record 2 text'))
+  // 1
+  console.log("records[index] = 'record 2 text updated'")
+  console.log(records[index] = 'record 2 text updated')
+  console.log("records[records.indexOf('record 3 text')] = 'record 3 text updated'")
+  console.log(records[records.indexOf('record 3 text')] = 'record 3 text updated')
+  console.log('records')
+  console.log(records)
+  // (4) ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
 
-console.log('// Delete (one) examples')
-console.log("index = records.indexOf('record 4 text')")
-console.log(index = records.indexOf('record 4 text'))
-// 3
-console.log('records.splice(index, 1)')
-console.log(records.splice(index, 1))
-// ['record 4 text']
-console.log("records.splice(records.indexOf('record 2 text updated'), 1)")
-console.log(records.splice(records.indexOf('record 2 text updated'), 1))
-// ['record 2 text updated']
-console.log('records')
-console.log(records)
-// (2) ['record 1 text', 'record 3 text updated']
-```
+  console.log('// Delete (one) examples')
+  console.log("index = records.indexOf('record 4 text')")
+  console.log(index = records.indexOf('record 4 text'))
+  // 3
+  console.log('records.splice(index, 1)')
+  console.log(records.splice(index, 1))
+  // ['record 4 text']
+  console.log("records.splice(records.indexOf('record 2 text updated'), 1)")
+  console.log(records.splice(records.indexOf('record 2 text updated'), 1))
+  // ['record 2 text updated']
+  console.log('records')
+  console.log(records)
+  // (2) ['record 1 text', 'record 3 text updated']
+  ```
 
 And then you can compare the actual output with the expected output in the comments.
 </details><br>
@@ -161,10 +161,10 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
+- [add UI](../0005-simplest-with-ui/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency
-- add UI
 - scale up
 - add ids
 - add validation

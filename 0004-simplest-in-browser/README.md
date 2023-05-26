@@ -95,7 +95,7 @@ if (index !== -1) records.splice(index, 1) // do nothing
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy, paste into your Developer Tools console and evaluate this code:</summary>
+  <summary>To test these examples you can copy, paste into your Developer Tools console and evaluate this code:</summary><br>
 
 ```js
   console.log('// Implementation initialization')

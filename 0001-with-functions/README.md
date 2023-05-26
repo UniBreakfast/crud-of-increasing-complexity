@@ -83,7 +83,7 @@ function deleteOneRecord(str) {
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary>
+  <summary>To test these examples you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary><br>
   
   ```js
   console.log("createOneRecord('record 1 text')")

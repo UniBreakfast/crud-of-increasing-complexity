@@ -103,7 +103,7 @@ if (index !== -1) records.splice(index, 1) // do nothing
 <details>
   <summary>
   To run this implementation you should have NodeJS installed. Run <code>node&nbsp;crud-in-repl</code> in your terminal to start NodeJS REPL.
-  To test these examples you can copy, paste into your REPL and evaluate this code:</summary>
+  To test these examples you can copy, paste into your REPL and evaluate this code:</summary><br>
 
 ```js
 // Implementation initialization'

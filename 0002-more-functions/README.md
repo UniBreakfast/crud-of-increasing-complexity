@@ -94,7 +94,7 @@ deleteAllRecords()
 ## The implementation details
 
 <details>
-  <summary>Base implementations was like this:</summary>
+  <summary>Base implementations was like this:</summary><br>
 
   ```js
   var records = []
@@ -123,7 +123,7 @@ deleteAllRecords()
 </details><br>
 
 <details>
-  <summary>On top of previous implementation, this one adds eight functions to perform rest of CRUD operations I can immediately think of:</summary>
+  <summary>On top of previous implementation, this one adds eight functions to perform rest of CRUD operations I can immediately think of:</summary><br>
 
   ```js
   function createManyRecords(...strings) {
@@ -177,7 +177,7 @@ deleteAllRecords()
 ## Testing
 
 <details>
-  <summary>To test the implementation you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary>
+  <summary>To test the implementation you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary><br>
 
   ```js
   console.log("createOneRecord('record 1 text')")

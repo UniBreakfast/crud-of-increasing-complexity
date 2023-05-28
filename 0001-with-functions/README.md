@@ -1,37 +1,27 @@
 <table>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
     <td>⇗</td>
     <td>0011 something with something</td>
   </tr>
   <tr>
     <td></td>
-    <td></td>
-    <td></td>
     <td>⇗</td>
     <td>0012 something with something</td>
   </tr>
   <tr>
-    <td>0009 previous implementation</td>
-    <td>⇒</td>
-    <td>0010 this implementation </td>
-    <td>⇒</td>
+    <td></td>
+    <td>⇗</td>
     <td>0013 something with something</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>⇘</td>
+    <td>0009 previous implementation</td>
+    <td>⇗</td>
     <td>0014 something with something</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>⇘</td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⇓ &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; </td>
+    <td>⇗</td>
     <td>0015 something with something</td>
   </tr>
 </table>

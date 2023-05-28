@@ -1,12 +1,12 @@
 <table>
   <tr>
-    <td></td>
-    <td></td>
+    <td style="border:none;background:none"></td>
+    <td style="border:none;background:none"></td>
     <td>⇗ 0011 something with something</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td style="border:none;background:none"></td>
+    <td style="border:none;background:none"></td>
     <td>⇗ 0012 something with something</td>
   </tr>
   <tr>

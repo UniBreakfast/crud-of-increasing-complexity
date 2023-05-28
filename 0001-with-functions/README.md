@@ -17,7 +17,7 @@
   <tr>
     <td></td>
     <td></td>
-    <td><span>⇘</span> <span><div>0014 something with something</div></span></td>
+    <td><div style="display:flex;align-items:center;gap:15px"><b>⇘</b>0014 something with something</div></td>
   </tr>
   <tr>
     <td></td>

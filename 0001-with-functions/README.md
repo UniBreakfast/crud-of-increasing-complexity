@@ -1,33 +1,23 @@
 <table>
   <tr>
+    <td><a href="../0000-simplest-for-me/README.md">0009 previous implementation</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
     <td></td>
-    <td>⇗</td>
-    <td>0011 something with something</td>
-  </tr>
-  <tr>
     <td></td>
-    <td>⇗</td>
-    <td>0012 something with something</td>
   </tr>
   <tr>
+    <td>&nbsp; &nbsp;⇓</td>
     <td></td>
-    <td>⇗</td>
-    <td>0013 something with something</td>
+    <td></td>
   </tr>
   <tr>
-    <td>0009 previous implementation&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+    <td><a href="">0001:</a></td>
     <td>⇗</td>
-    <td>0014 something with something</td>
-  </tr>
-  <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⇓</td>
-    <td>⇗</td>
-    <td>0015 something with something</td>
+    <td><a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">Add more CRUD functions</a></td>
   </tr>
 </table>
 
 
-# The simplest CRUD implementation with functions
+# <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">The simplest CRUD implementation with functions</a>
 
 ## What is this?
 

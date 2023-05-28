@@ -8,59 +8,59 @@
   <link rel="icon" href="data:">
 
   <script>
-    const records = []
-    let i
-
     onload = () => {
       addForm.onsubmit = () => {
         const value = addInput.value.trim()
         if (!value) return
-        records.push(value)
+        const btn = document.createElement('button')
+        main.prepend(Object.assign(btn, {innerText: value}))
         addForm.reset()
-        render()
       }
 
       main.onclick = e => {
         const btn = e.target.closest('button')
         if (!btn) {
-          if (addForm.hidden) switchForms()
+          if (addForm.hidden) {
+            switchForms()
+            main.querySelector(':disabled').disabled = false
+          }
           return
         }
-        i = records.length - 1 - [].indexOf.call(main.children, btn)
         if (editForm.hidden) switchForms()
         else main.querySelector(':disabled').disabled = false
-        editInput.value = records[i]
-        main.children[records.length - 1 - i].disabled = true
+        editInput.value = btn.innerText
+        btn.disabled = true
       }
 
       editForm.onsubmit = () => {
         const value = editInput.value.trim()
         if (!value) return
-        records[i] = value
+        const btn = main.querySelector(':disabled')
+        Object.assign(btn, {disabled:false, innerText: value})
         switchForms()
       }
 
-      cancelBtn.onclick = switchForms
+      cancelBtn.onclick = () => {
+        switchForms()
+        main.querySelector(':disabled').disabled = false
+      }
 
       removeBtn.onclick = () => {
-        records.splice(i, 1)
+        main.querySelector(':disabled').remove()
         switchForms()
       }
     }
 
     onkeydown = e => {
-      if (e.key === 'Escape' && addForm.hidden) switchForms()
+      if (e.key !== 'Escape' || editForm.hidden) return
+      switchForms()
+      main.querySelector(':disabled').disabled = false
     }
 
     function switchForms() {
       addForm.hidden = !addForm.hidden
       editForm.hidden = !editForm.hidden
       document.querySelector('form:not([hidden]) input').focus()
-      render()
-    }
-
-    function render() {
-      main.innerHTML = records.map(str => `<button>${str}</button>`).reverse().join('')
     }
   </script>
 
@@ -112,8 +112,7 @@
   <main id="main"></main>
 
   <footer>
-    <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md">project
-      details on GitHub</a>
+    <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md">project details on GitHub</a>
   </footer>
 </body>
 

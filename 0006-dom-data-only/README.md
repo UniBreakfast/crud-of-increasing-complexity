@@ -1,17 +1,17 @@
 <table>
   <tr>
-    <td><a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
+    <td><a href="../0005-simplest-with-ui/README.md">0005 array with ui</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0006-dom-data-only/README.md">0006 with data in DOM only</a></td>
+    <td></td>
   </tr>
 </table>
 
-# [0005 The simplest CRUD implementation with UI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md)
+# [0006 The simplest CRUD implementation with data in DOM only](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0006-dom-data-only/README.md)
 # 
 
 ## What is this?
 
-This is the simplest CRUD implementation for HTML, CSS and JS. It is based on the [simplest implementation in the browser](../0004-simplest-in-browser/README.md) and adds a UI to it removing the need to interact with the console or making any CRUD operations manually with code. It's in memory without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
+This is the simplest CRUD implementation for HTML, CSS and JS. It is based on the [simplest implementation with UI](../0005-simplest-with-ui/README.md) and removes the records array completely. It stores them in DOM instead without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
 
 ## What is CRUD?
 
@@ -94,57 +94,57 @@ To delete a string from the array, user has to click the button with the string 
   ### JS
 
   ```js
-  const records = []
-  let i
-
   addForm.onsubmit = () => {
     const value = addInput.value.trim()
     if (!value) return
-    records.push(value)
+    const btn = document.createElement('button')
+    main.prepend(Object.assign(btn, {innerText: value}))
     addForm.reset()
-    render()
   }
 
   main.onclick = e => {
     const btn = e.target.closest('button')
     if (!btn) {
-      if (addForm.hidden) switchForms()
+      if (addForm.hidden) {
+        switchForms()
+        main.querySelector(':disabled').disabled = false
+      }
       return
     }
-    i = records.length - 1 - [].indexOf.call(main.children, btn)
     if (editForm.hidden) switchForms()
     else main.querySelector(':disabled').disabled = false
-    editInput.value = records[i]
-    main.children[records.length - 1 - i].disabled = true
+    editInput.value = btn.innerText
+    btn.disabled = true
   }
 
   editForm.onsubmit = () => {
     const value = editInput.value.trim()
     if (!value) return
-    records[i] = value
+    const btn = main.querySelector(':disabled')
+    Object.assign(btn, {disabled:false, innerText: value})
     switchForms()
   }
 
-  cancelBtn.onclick = switchForms
+  cancelBtn.onclick = () => {
+    switchForms()
+    main.querySelector(':disabled').disabled = false
+  }
 
   removeBtn.onclick = () => {
-    records.splice(i, 1)
+    main.querySelector(':disabled').remove()
     switchForms()
   }
 
   onkeydown = e => {
-    if (e.key === 'Escape' && addForm.hidden) switchForms()
+    if (e.key !== 'Escape' || editForm.hidden) return
+    switchForms()
+    main.querySelector(':disabled').disabled = false
   }
 
   function switchForms() {
     addForm.hidden = !addForm.hidden
     editForm.hidden = !editForm.hidden
     document.querySelector('form:not([hidden]) input').focus()
-    render()
-  }
-
-  function render() {
-    main.innerHTML = records.map(str => `<button>${str}</button>`).reverse().join('')
   }
   ```
 
@@ -154,19 +154,10 @@ To delete a string from the array, user has to click the button with the string 
 
 ## Testing
 
-You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0005-simplest-with-ui) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
-
-## Persistency of data
-
-This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
-
-```js
-'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
-```
+You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0006-dom-data-only) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
 
 ## What's next?
 
-- [move records data to the DOM](../0006-dom-data-only/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency

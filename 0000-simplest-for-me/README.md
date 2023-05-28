@@ -1,4 +1,23 @@
-# The simplest CRUD implementation for me
+<table>
+  <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0004-simplest-in-browser/README.md">0004 in a Browser</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0003-simplest-nodejs-repl/README.md">0003 in NodeJS REPL</a></td>
+  </tr>
+  <tr>
+    <td><a href="../README.md">The idea of CRUD</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a></td>
+  </tr>
+</table>
+
+# [0000 The simplest CRUD implementation for me](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0000-simplest-for-me/README.md)
+# 
 
 ## What is this?
 

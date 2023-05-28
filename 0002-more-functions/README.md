@@ -1,4 +1,12 @@
-# The simple CRUD implementation with more functions
+<table>
+  <tr>
+    <td><a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+
+# [0002 The simple CRUD implementation with more functions](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0002-more-functions/README.md)
 
 ## What is this?
 

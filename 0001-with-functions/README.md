@@ -6,7 +6,7 @@
   </tr>
 </table>
 
-# <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">0001 The simplest CRUD implementation with functions</a>
+# [0001 The simplest CRUD implementation with functions](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md)
 
 ## What is this?
 

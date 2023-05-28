@@ -1,4 +1,13 @@
-# The simplest CRUD implementation with UI
+<table>
+  <tr>
+    <td><a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+
+# [0005 The simplest CRUD implementation with UI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md)
+# 
 
 ## What is this?
 

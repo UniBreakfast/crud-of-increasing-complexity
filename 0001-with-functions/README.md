@@ -10,9 +10,9 @@
     <td></td>
   </tr>
   <tr>
-    <td><a href="">0001:</a></td>
+    <td><a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">0001:</a></td>
     <td>⇗</td>
-    <td><a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">0002 Add more CRUD functions</a></td>
+    <td><a href="../0002-more-functions/README.md">0002 Add more CRUD functions</a></td>
   </tr>
 </table>
 

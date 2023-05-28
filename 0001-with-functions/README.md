@@ -52,7 +52,7 @@ deleteOneRecord('record 5 text')
 ## The implementation details
 
 On top of [previous implementation](../0000-simplest-for-me/README.md), 
-<details><summary>this one adds four functions to perform CRUD operations.</summary>
+<details><summary>this one adds four functions to perform CRUD operations.</summary><br>
 
 ```js
 var records = []

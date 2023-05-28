@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><a href="../0000-simplest-for-me/README.md">simplest implementation</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
     <td></td>
     <td></td>
   </tr>

@@ -1,23 +1,12 @@
 <table>
   <tr>
-    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&nbsp; &nbsp;⇓</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">0001:</a></td>
-    <td>⇗</td>
-    <td><a href="../0002-more-functions/README.md">0002 Add more CRUD functions</a></td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0002-more-functions/README.md">0002 Add more CRUD functions</a></td>
   </tr>
 </table>
 
-
-# <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">The simplest CRUD implementation with functions</a>
+# <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0001-with-functions/README.md">0001 The simplest CRUD implementation with functions</a>
 
 ## What is this?
 

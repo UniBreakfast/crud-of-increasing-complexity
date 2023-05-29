@@ -1,11 +1,11 @@
 <table>
   <tr>
-    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; <a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0006-dom-data-only/README.md">0006 with data in DOM only</a></td>
   </tr>

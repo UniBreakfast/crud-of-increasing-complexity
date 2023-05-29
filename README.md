@@ -2,7 +2,7 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a></td>
+    <td><b>↱</b> <a href="./0000-simplest-for-me/README.md">0000 simplest implementation</a></td>
   </tr>
 </table>
 

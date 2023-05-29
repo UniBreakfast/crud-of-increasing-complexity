@@ -1,4 +1,12 @@
-# CRUD implementations of gradually increasing complexity
+<table>
+  <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a></td>
+  </tr>
+</table>
+
+# [CRUD implementations of gradually increasing complexity](https://github.com/UniBreakfast/crud-of-increasing-complexity)
 
 ## What is this?
 

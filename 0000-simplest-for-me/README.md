@@ -2,17 +2,17 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0004-simplest-in-browser/README.md">0004 in a Browser</a></td>
+    <td><b>↱</b> <a href="../0004-simplest-in-browser/README.md">0004 in a Browser</a> +2</td>
   </tr>
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0003-simplest-nodejs-repl/README.md">0003 in NodeJS REPL</a></td>
+    <td><b>↱</b> <a href="../0003-simplest-nodejs-repl/README.md">0003 in NodeJS REPL</a> +1</td>
   </tr>
   <tr>
     <td><a href="../README.md">The idea of CRUD</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a></td>
+    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a> +1</td>
   </tr>
 </table>
 

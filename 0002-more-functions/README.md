@@ -1,6 +1,12 @@
 <table>
   <tr>
-    <td><a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>

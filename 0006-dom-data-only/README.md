@@ -1,6 +1,16 @@
 <table>
   <tr>
-    <td><a href="../0005-simplest-with-ui/README.md">0005 array with ui</a> <b>↴</b></td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; <a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0005-simplest-with-ui/README.md">0005 array with ui</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>

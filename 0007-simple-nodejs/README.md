@@ -11,11 +11,11 @@
   </tr>
 </table>
 
-# [0007 The simplest CRUD implementation in NodeJS CLI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0007-simple-nodejs/README.md)
+# [0007 Simple CRUD implementation in NodeJS CLI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0007-simple-nodejs/README.md)
 
 ## What is this?
 
-This is the simplest CRUD implementation with NodeJS CLI via readline. It is based on the [simplest NodeJS REPL implementation](../0003-simplest-nodejs-repl/README.md) which required JavaScript input to do actions required. Now it is supposed to be more straightforward due to prompts and explicit answers from the app. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+This is the CRUD implementation with NodeJS CLI via readline. It is based on the [simplest NodeJS REPL implementation](../0003-simplest-nodejs-repl/README.md) which required JavaScript input to do actions required. Now it is supposed to be more straightforward due to prompts and explicit answers from the app. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 
@@ -27,22 +27,6 @@ CRUD is an acronym for Create, Read, Update and Delete. It's a set of operations
 - Delete (one): remove a string from the array
 
 I will not implement any other operations, like read individual items or delete all, because I want to keep this implementation as simple as it is acceptable for me.
-
-## What is the simplest implementation for me?
-
-The simplest implementation for me is the one that is easy to understand and easy to use. It's not necessarily the one that is the fastest, safest or the most efficient. It's the one that is the most straightforward and easy to use for me. It's the one that I can easily remember and use without having to look up the documentation. It's the one that I can easily explain to someone else. It's the one that I can easily modify to add new features.
-
-```js
-!!!!!!!!!!!!!!!!!!! require('repl').start().context.records = []
-```
-
-This simply starts NodeJS REPL and adds an empty array to the context of the REPL. If you're not familiar with NodeJS REPL, you can think of it as a console where you can input JavaScript code and see the results of its evaluation. So it's basically the same as the following
-
-```js
-var records = []
-```
-
-Yep, that's it. That's the simplest implementation for me. It's an empty array. It's easy to understand, easy to use, easy to remember, easy to explain and easy to modify.
 
 ## How to perform CRUD operations?
 

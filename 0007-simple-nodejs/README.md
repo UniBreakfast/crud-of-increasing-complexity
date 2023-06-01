@@ -134,6 +134,8 @@ Careful with deleting records, there is no confirmation.
 
 ## The implementation details
 
+The whole implementation unabridged is in [`cli.js`](./cli.js). It's not very long, but it's not very simple either. It's not the simplest implementation for me, but it's as simple as I can think of for NodeJS CLI now.
+
 <details>
   <summary>The main part of implementation, although abridged and not functional without completion, is this:</summary><br>
 

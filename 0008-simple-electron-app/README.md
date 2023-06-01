@@ -53,7 +53,7 @@ To delete a string from the array, user has to click the button with the string 
 ## The implementation details
 
 <details>
-  <summary>The main parts of implementation are the same, they came directly from the previous implementation without any changes. And I added what was required for an Electron app - `main.js` and `package.json`. So here's what we have:</summary><br>
+  <summary>The main parts of implementation are the same, they came directly from the previous implementation without any changes. And I added what was required for an Electron app - <code>main.js</code> and <code>package.json</code>. So here's what we have:</summary><br>
   
   ### JSON
 
@@ -190,7 +190,6 @@ To delete a string from the array, user has to click the button with the string 
   ```
 
   Full source code is available in a file `index.html` [here](./index.html).
-
 </details><br>
 
 ## Testing

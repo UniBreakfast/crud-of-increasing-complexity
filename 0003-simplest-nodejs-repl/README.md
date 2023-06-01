@@ -2,7 +2,7 @@
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0007-simple-nodejs/README.md">0007 with CLI</a></td>
+    <td><b>↱</b> <a href="../0007-simple-nodejs-cli/README.md">0007 with CLI</a></td>
   </tr>
 </table>
 
@@ -154,7 +154,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
-- [add CLI](../0007-simple-nodejs/README.md)
+- [add CLI](../0007-simple-nodejs-cli/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency

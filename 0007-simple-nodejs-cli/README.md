@@ -11,7 +11,7 @@
   </tr>
 </table>
 
-# [0007 Simple CRUD implementation in NodeJS CLI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0007-simple-nodejs/README.md)
+# [0007 Simple CRUD implementation in NodeJS CLI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0007-simple-nodejs-cli/README.md)
 
 ## What is this?
 

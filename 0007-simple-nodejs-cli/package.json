@@ -1,5 +1,5 @@
 {
-  "name": "0007-simple-nodejs",
+  "name": "0007-simple-nodejs-cli",
   "version": "1.0.0",
   "description": "",
   "main": "cli.js",

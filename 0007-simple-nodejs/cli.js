@@ -16,11 +16,11 @@ function welcome() {
 function handleInput(str) {
   str = str.trim()
 
-  if (/^e(xit)?$/.test(str)) exit()
-  else if (/^c(reate)? +\S/.test(str)) handleCreate(str)
-  else if (/^r(ead)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all)$/.test(str)) handleRead(str)
-  else if (/^u(pdate)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all) +\S/.test(str)) handleUpdate(str)
-  else if (/^d(elete)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all)$/.test(str)) handleDelete(str)
+  if (/^e(xit)?$/i.test(str)) exit()
+  else if (/^c(reate)? +\S/i.test(str)) handleCreate(str)
+  else if (/^r(ead)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all)$/i.test(str)) handleRead(str)
+  else if (/^u(pdate)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all) +\S/i.test(str)) handleUpdate(str)
+  else if (/^d(elete)? +(\d+(-\d+)?(, ?\d+(-\d+)?)*|all)$/i.test(str)) handleDelete(str)
   else helpOnIncorrectInput()
 
   cli.prompt('▷  ')
@@ -31,7 +31,7 @@ function output(str) {
 }
 
 function handleCreate(str) {
-  const record = str.replace(/^c(reate)? +| +$/g, '')
+  const record = str.replace(/^c(reate)? +| +$/gi, '')
   const count = records.push(record)
 
   output(`1 record created and ${count < 2 ? 'stored:' : `added${count < 3 ? '' : ` to ${count - 1} existing ones`}, now there are ${count}.`}\n  ${count}. ${record}`)
@@ -42,7 +42,7 @@ function handleRead(str) {
 
   if (!count) return output('No records to read, 0, none!')
 
-  let indices = str.replace(/^r(ead)? +/, '')
+  let indices = str.replace(/^r(ead)? +/i, '')
   
   if (indices === 'all') {
     output(`${count < 2 ? 'The 1 and only record is' : `All ${count} records are`}:\n${records.map((record, i) => `  ${i + 1}. ${record}`).join('\n')}`)
@@ -61,7 +61,7 @@ function handleUpdate(str) {
 
   if (!count) return output('No records to update, 0, none!')
 
-  let [, indices, record] = str.match(/^u(?:pdate)? +(\d+(?:-\d+)?(?:, ?\d+(?:-\d+)?)*|all) +(.*)/)
+  let [, indices, record] = str.match(/^u(?:pdate)? +(\d+(?:-\d+)?(?:, ?\d+(?:-\d+)?)*|all) +(.*)/i)
 
   if (indices === 'all') {
     records.forEach((_, i) => records[i] = record)
@@ -87,7 +87,7 @@ function handleDelete(str) {
 
   if (!count) return output('No records to delete, 0, none!')
 
-  let indices = str.replace(/^d(elete)? +/, '')
+  let indices = str.replace(/^d(elete)? +/i, '')
 
   if (indices === 'all') {
     output(`${count < 2 ? 'The 1 and only record was' : `All ${count} records were`} deleted:\n${records.map((record, i) => `  ${i + 1}. ${record}`).join('\n')}\n... so there are no records now.`)
@@ -107,7 +107,7 @@ function handleDelete(str) {
 
 function extractIndices(indices) {
   return [...new Set(indices.split(/, ?/).flatMap(chunk => {
-    if (chunk.match(/-/)) {
+    if (chunk.includes('-')) {
       let [start, end] = chunk.split('-')
 
       if (start > end) [start, end] = [end, start]

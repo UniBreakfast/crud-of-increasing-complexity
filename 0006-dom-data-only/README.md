@@ -17,7 +17,6 @@
 </table>
 
 # [0006 The simplest CRUD implementation with data in DOM only](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0006-dom-data-only/README.md)
-# 
 
 ## What is this?
 

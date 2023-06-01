@@ -4,7 +4,6 @@
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
-
   <tr>
     <td>&nbsp; &nbsp; <a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>

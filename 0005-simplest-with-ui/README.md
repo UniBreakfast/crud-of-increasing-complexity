@@ -12,7 +12,6 @@
 </table>
 
 # [0005 The simplest CRUD implementation with UI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md)
-# 
 
 ## What is this?
 

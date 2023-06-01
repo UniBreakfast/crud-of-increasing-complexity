@@ -8,8 +8,6 @@
 
 # [0003 The simplest CRUD implementation in NodeJS REPL](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0003-simplest-nodejs-repl/README.md)
 
-# 
-
 ## What is this?
 
 This is the simplest CRUD implementation for NodeJS REPL. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) which was not platform-specific. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
@@ -156,11 +154,11 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
+- [add CLI](../0007-simple-nodejs/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency
 - add UI
-- add CLI
 - scale up
 - add ids
 - add validation

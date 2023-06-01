@@ -22,132 +22,216 @@ This is the CRUD implementation with NodeJS CLI via readline. It is based on the
 CRUD is an acronym for Create, Read, Update and Delete. It's a set of operations that are usually performed on data. It's a common set of operations for databases, but it can be used for any kind of data. In this case I will use it for a simple array of strings. The minimum set of operations I have in mind for this particular simplest implementation includes:
 
 - Create (one): add a new string to the array
-- Read (all): get all strings from the array
-- Update (one): change a string in the array
-- Delete (one): remove a string from the array
-
-I will not implement any other operations, like read individual items or delete all, because I want to keep this implementation as simple as it is acceptable for me.
+- Read (one, many or all): get any strings from the array
+- Update (one, many or all): change any strings in the array
+- Delete (one, many or all): remove any strings from the array
 
 ## How to perform CRUD operations?
 
-There's no UI in this simplest implementation, so we're using the NodeJS REPL here. I won't use anything NodeJS-specific here. So to perform CRUD operations we'll input JavaScript code in the comman line of NodeJS REPL.
+Run it in terminal with `node cli` or `npm start`. Make sure you are in implementation folder. All commands are case insensitive. If you are mistaken CLI will show you a little guide to help.
 
 ### Create (one)
 
-To create a new string in the array, I need to add it to the end of the array. I would use `Array.prototype.push` method for that. It will add a new element to the end of the array and return the new length of the array. I don't need the length, so I can just ignore it.
+To create a new record in the array, I can use command 'create' or its shorthand 'c':
 
-```js
-records.push('record 1 text') // 1
-records.push('record 2 text') // 2
-records.push('record 3 text') // 3
-records.push('record 4 text') // 4
+```
+▷  create Myst III Exile
+◁  1 record created and stored:
+  1. Myst III Exile
+
+▷  create Beyond the Good & Evil
+◁  1 record created and added, now there are 2.
+  2. Beyond the Good & Evil
+
+▷  c The Witness
+◁  1 record created and added to 2 existing ones, now there are 3.
+  3. The Witness
+
+▷  c TES III Morrowind
+◁  1 record created and added to 3 existing ones, now there are 4.
+  4. TES III Morrowind
 ```
 
-### Read (all)
+### Read (one, many or all)
 
-To read all strings from the array, I can simply ask for the array itself. I can use `console.log` to print it to the console. But I'm already in the console, so I can just type the name of the array and press Enter to see its contents.
+To read some records from the array I can use command 'read' or its shorhand 'r' with 1-based indices or 'all' to read all:
 
-```js
-records // ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
+```
+▷  read 1
+◁  1 record out of 4 stored was read:
+  1. Myst III Exile
+
+▷  read 2-4
+◁  3 records out of 4 stored were read:
+  2. Beyond the Good & Evil
+  3. The Witness
+  4. TES III Morrowind
+
+▷  r 1,3,4
+◁  3 records out of 4 stored were read:
+  1. Myst III Exile
+  3. The Witness
+  4. TES III Morrowind
+
+▷  r 1, 3-4
+◁  3 records out of 4 stored were read:
+  1. Myst III Exilea
+  3. The Witness
+  4. TES III Morrowind
+
+▷  read all
+◁  All 4 records are:
+  1. Myst III Exile
+  2. Beyond the Good & Evil
+  3. The Witness
+  4. TES III Morrowind
 ```
 
-### Update (one)
+### Update (one, many or all)
 
-To update a string in the array, I need to assign a new value to the element at the index of the string I want to update. I can use `Array.prototype.indexOf` method to get the index of the string I want to update. I can use bracket notation to assign a new value to the element at the index.
+To update a string in the array, I can use command 'update' or 'u' with 1-based indices or 'all' to update all and then the new value to replace the old one(s) with it:
 
-```js
-index = records.indexOf('record 2 text') // 1
-records[index] = 'record 2 text updated' // 'record 2 text updated'
+```
+▷  update 1 Myst II Riven
+◁  1 record out of 4 stored was updated:
+  1. Myst III Exile
+... and set to:
+  Myst II Riven
+
+▷  update 3-5 great game
+◁  2 records out of 4 stored were updated:
+  3. The Witness
+  4. TES III Morrowind
+... and set to:
+  great game
+
+▷  u all a game
+◁  All records updated to:
+  a game
 ```
 
-or I can do it in one line
+Not sure why would anyone update multiple or all records to one value, but it's possible anyway.
 
-```js
-records[records.indexOf('record 3 text')] = 'record 3 text updated' // 'record 3 text updated'
+### Delete (one, many or all)
+
+To delete a string from the array, I need to use command 'delete' or 'd' with 1-based indices or 'all' to delete all:
+
+```
+▷  delete 1-2
+◁  2 records out of 4 stored were deleted:
+  2. a game
+  1. a game
+... so there remain 2 records now.
+
+▷  d all
+◁  All 2 records were deleted:
+  1. a game
+  2. a game
+... so there are no records now.
 ```
 
-But be careful, because `Array.prototype.indexOf` method returns `-1` if the element is not found in the array. So if you try to update a string that is not in the array, you will add or change the property with the key of `-1` instead. So you need to check if the index is not `-1` before updating the element if you are not sure if the string is in the array.
+Careful with deleting records, there is no confirmation.
 
-```js
-index = records.indexOf('record 5 text') // -1
-if (index !== -1) records[index] = 'record 5 text updated' // do nothing
-```
+## The implementation details
 
-### Delete (one)
+<details>
+  <summary>The main part of implementation, although abridged and not functional without completion, is this:</summary><br>
 
-To delete a string from the array, I need to remove the element at the index of the string I want to delete. I can use `Array.prototype.splice` method to remove the element at the index. I can use `Array.prototype.indexOf` method to get the index of the string I want to delete.
+  ```js
+  const { createInterface } = require('readline')
+  const records = []
+  const { stdin, stdout, exit } = process
 
-```js
-index = records.indexOf('record 4 text') // 3
-records.splice(index, 1) // ['record 4 text']
-```
+  const cli = createInterface(stdin, stdout)
 
-or again I can do it in one line
+  welcome()
 
-```js
-records.splice(records.indexOf('record 2 text updated'), 1) // ['record 2 text updated']
-```
+  function welcome() {
+    output(`Record(s) stored: ${records.length}`)
+    cli.on('line', handleInput)
+  }
 
-But be careful, because `Array.prototype.indexOf` method returns `-1` if the element is not found in the array. So if you try to delete a string that is not in the array, you will delete the last element in the array instead. So you need to check if the index is not `-1` before deleting the element if you are not sure if the string is in the array.
+  function handleInput(str) {
+    if (/^e(xit)?$/.test(str)) exit()
+    else if (/^c(reate)? +\S/.test(str)) handleCreate(str)
+    else if (/^r(ead)? +(\d+(-\d+)?|all)$/.test(str)) handleRead(str)
+    else if (/^u(pdate)? +(\d+(-\d+)?|all) +\S/.test(str)) handleUpdate(str)
+    else if (/^d(elete)? +(\d+(-\d+)?*|all)$/.test(str)) handleDelete(str)
+    else helpOnIncorrectInput()
+  }
 
-```js
-index = records.indexOf('record 5 text') // -1
-if (index !== -1) records.splice(index, 1) // do nothing
-```
+  function handleCreate(str) {
+    const record = str.replace(/^c(reate)? +| +$/g, '')
+    records.push(record)
+
+    output(`1 record created and added`)
+  }
+
+  function handleRead(str) {
+    const count = records.length
+
+    if (!count) return output('No records to read, 0, none!')
+
+    let indices = str.replace(/^r(ead)? +/, '')
+    
+    indices = extractIndices(indices).sort((a, b) => a - b)
+
+    output(indices.map(i => `  ${i + 1}. ${records[i]}`).join('\n'))
+  }
+
+  function handleUpdate(str) {
+    let [, indices, record] = str.match(/^u(?:pdate)? +(\d+(?:-\d+)?|all) +(.*)/)
+
+    indices = extractIndices(indices).sort((a, b) => a - b)
+
+    const oldRecords = indices.map(i => {
+      const oldRecord = records[i]
+      records[i] = record
+      return oldRecord
+    })
+
+    output(`${indices.length} records were updated${`:\n${indices.map((i, j) => `${i + 1}. ${oldRecords[j]}`).join('\n')}\n... and set to:\n  ${record}`}`)
+  }
+
+  function handleDelete(str) {
+    let indices = str.replace(/^d(elete)? +/, '')
+
+    indices = extractIndices(indices).sort((a, b) => b - a)
+
+    const deletedRecords = indices.map(i => records.splice(i, 1)[0])
+
+    output(`${indices.length} records were deleted:\n${indices.map((i, j) => `  ${i + 1}. ${deletedRecords[j]}`).join('\n')}`)
+  }
+
+  function extractIndices(indices) {
+    return [...new Set(indices.split(/, ?/).flatMap(chunk => {
+      if (chunk.match(/-/)) {
+        let [start, end] = chunk.split('-')
+        return Array.from({ length: end - start + 1 }, (_, i) => +start + i - 1)
+      } else {
+        return chunk - 1
+      }
+    }))].filter(i => i < records.length)
+  }
+  ```
+
+</details><br>
+
 
 ## Testing
 
-<details>
-  <summary>
-  To run this implementation you should have NodeJS installed. Run <code>node&nbsp;crud-in-repl</code> in your terminal to start NodeJS REPL.
-  To test these examples you can copy, paste into your REPL and evaluate this code:</summary><br>
-
-```js
-// Implementation initialization'
-records = []
-
-// Create (one) examples
-records.push('record 1 text') // 1
-records.push('record 2 text') // 2
-records.push('record 3 text') // 3
-records.push('record 4 text') // 4
-
-// Read (all) example
-records // ['record 1 text', 'record 2 text', 'record 3 text', 'record 4 text']
-
-// Update (one) examples
-index = records.indexOf('record 2 text') // 1
-records[index] = 'record 2 text updated'
-records[records.indexOf('record 3 text')] = 'record 3 text updated'
-
-records // ['record 1 text', 'record 2 text updated', 'record 3 text updated', 'record 4 text']
-
-// Delete (one) examples
-index = records.indexOf('record 4 text') // 3
-records.splice(index, 1) // ['record 4 text']
-records.splice(records.indexOf('record 2 text updated'), 1) // ['record 2 text updated']
-
-records // ['record 1 text', 'record 3 text updated']
-```
-
-And then you can compare the actual output with the expected output in the comments.
-</details><br>
+You can test it manually by opening the CLI and performing CRUD operations as described above. By typing in the commands and pressing Enter.
 
 ## Persistency of data
 
-This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
-
-```js
-'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
-```
+This implementation is in memory, so it's not persistent between runs.
 
 ## What's next?
 
 - add some CRUD functions
 - add CRUD methods
 - add persistency
-- add UI
-- add CLI
+- improve UX
 - scale up
 - add ids
 - add validation

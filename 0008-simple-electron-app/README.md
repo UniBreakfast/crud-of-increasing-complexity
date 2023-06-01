@@ -2,20 +2,25 @@
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0008-simple-electron-app/README.md">0008 desktop app with Electron</a></td>
+    <td></td>
   </tr>
   <tr>
     <td>&nbsp; &nbsp; <a href="../0004-simplest-in-browser/README.md">0004 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0006-dom-data-only/README.md">0006 with data in DOM only</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0005-simplest-with-ui/README.md">0005 and with UI</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0005 The simplest CRUD implementation with UI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md)
+# [0008 Simple CRUD implementation with Electron](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0008-simple-electron-app/README.md)
 
 ## What is this?
 
-This is the simplest CRUD implementation for HTML, CSS and JS. It is based on the [simplest implementation in the browser](../0004-simplest-in-browser/README.md) and adds a UI to it removing the need to interact with the console or making any CRUD operations manually with code. It's in memory without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
+This is a simple CRUD implementation in a form of a desktop app running on Electron. It is based on the [simplest implementation in the browser with UI](../0005-simplest-with-ui/README.md) and places it in an Electron app window able to run out of your browser. It's in memory without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
 
 ## What is CRUD?
 
@@ -48,7 +53,39 @@ To delete a string from the array, user has to click the button with the string 
 ## The implementation details
 
 <details>
-  <summary>The main parts of implementation are:</summary><br>
+  <summary>The main parts of implementation are the same, they came directly from the previous implementation without any changes. And I added what was required for an Electron app - `main.js` and `package.json`. So here's what we have:</summary><br>
+  
+  ### JSON
+
+  ```json
+  {
+    "name": "0008-simple-electron-app",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+      "preparation": "npm install -g electron",
+      "start": "electron ."
+    }
+  }
+  ```
+
+  ### NodeJS
+
+  ```js
+  const { app, BrowserWindow } = require('electron')
+
+  app.whenReady().then(() => new BrowserWindow(
+    { width: 800, height: 600, webPreferences: { nodeIntegration: true } }
+  ).loadFile('index.html'))
+
+  app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit()
+  })
+
+  app.on('activate', () => {
+    if (!BrowserWindow.getAllWindows().length) createWindow()
+  })
+  ```
 
   ### HTML
 
@@ -158,20 +195,14 @@ To delete a string from the array, user has to click the button with the string 
 
 ## Testing
 
-You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0005-simplest-with-ui) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
+To be able to run this Electron app you need to have [NodeJS](https://nodejs.org/en/) installed, of course. You also need to have Electron installed globally. You can do that by running `npm run preparation` or simply `npm i -g electron` in a terminal. After that you may run the app with `npm start` or `electron .`. Just be sure to change the directory to the implementation directory before trying that. You can test the CRUD functionality manually by running the app and performing create, read, update and delete operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
 
 ## Persistency of data
 
-This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
-
-```js
-'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
-```
+This implementation is in memory, so it's not persistent between runs.
 
 ## What's next?
 
-- [move records data to the DOM](../0006-dom-data-only/README.md)
-- [make an Electron app out of it](../0008-simple-electron-app/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency

@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "preparation": "npm install -g electron",
     "start": "electron ."
   },
   "keywords": [],

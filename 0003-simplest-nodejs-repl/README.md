@@ -10,7 +10,7 @@
 
 ## What is this?
 
-This is the simplest CRUD implementation for NodeJS REPL. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) which was not platform-specific. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+This is the simplest CRUD implementation for NodeJS REPL. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) which was not platform-specific. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 

@@ -15,7 +15,7 @@
 
 ## What is this?
 
-This is the CRUD implementation with NodeJS CLI via readline. It is based on the [simplest NodeJS REPL implementation](../0003-simplest-nodejs-repl/README.md) which required JavaScript input to do actions required. Now it is supposed to be more straightforward due to prompts and explicit answers from the app. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistant storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+This is the CRUD implementation with NodeJS CLI via readline. It is based on the [simplest NodeJS REPL implementation](../0003-simplest-nodejs-repl/README.md) which required JavaScript input to do actions required. Now it is supposed to be more straightforward due to prompts and explicit answers from the app. It's not supposed to be the simplest one for anyone else necessarily. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 

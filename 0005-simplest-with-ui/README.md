@@ -1,5 +1,10 @@
 <table>
   <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0009-split-code-by-lang/README.md">0009 separating HTML, CSS, JS</a></td>
+  </tr>
+  <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0008-simple-electron-app/README.md">0008 desktop app with Electron</a></td>
@@ -15,7 +20,7 @@
 
 ## What is this?
 
-This is the simplest CRUD implementation for HTML, CSS and JS. It is based on the [simplest implementation in the browser](../0004-simplest-in-browser/README.md) and adds a UI to it removing the need to interact with the console or making any CRUD operations manually with code. It's in memory without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
+This is the simplest CRUD implementation for HTML, CSS and JS. It is based on the [simplest implementation in the browser](../0004-simplest-in-browser/README.md) and adds a UI to it removing the need to interact with the console or making any CRUD operations manually with code. It's in memory without any persistent storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
 
 ## What is CRUD?
 
@@ -172,6 +177,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 - [move records data to the DOM](../0006-dom-data-only/README.md)
 - [make an Electron app out of it](../0008-simple-electron-app/README.md)
+- [separate HTML, CSS and JS](../0009-split-code-by-lang/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency

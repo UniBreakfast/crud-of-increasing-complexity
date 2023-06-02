@@ -20,7 +20,7 @@
 
 ## What is this?
 
-This is a simple CRUD implementation in a form of a desktop app running on Electron. It is based on the [simplest implementation in the browser with UI](../0005-simplest-with-ui/README.md) and places it in an Electron app window able to run out of your browser. It's in memory without any persistant storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
+This is a simple CRUD implementation in a form of a desktop app running on Electron. It is based on the [simplest implementation in the browser with UI](../0005-simplest-with-ui/README.md) and places it in an Electron app window able to run out of your browser. It's in memory without any persistent storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
 
 ## What is CRUD?
 

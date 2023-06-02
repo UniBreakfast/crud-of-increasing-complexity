@@ -187,9 +187,6 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 - [settle with Browser](../0004-simplest-in-browser/README.md)
 - add CRUD methods
 - add persistency
-- add UI
-- add CLI
-- scale up
 - add ids
 - add validation
 - make client-server

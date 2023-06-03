@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0009-split-code-by-lang/README.md">0009 separating HTML, CSS, JS</a></td>
+    <td><b>↱</b> <a href="../0009-split-code-by-lang/README.md">0009 separating HTML, CSS, JS</a> +1</td>
   </tr>
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>

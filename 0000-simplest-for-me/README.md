@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0004-simplest-in-browser/README.md">0004 in a Browser</a> +4</td>
+    <td><b>↱</b> <a href="../0004-simplest-in-browser/README.md">0004 in a Browser</a> +5</td>
   </tr>
   <tr>
     <td></td>

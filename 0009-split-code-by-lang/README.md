@@ -10,13 +10,13 @@
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0005-simplest-with-ui/README.md">0005 with UI</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0005-simplest-with-ui/README.md">0005 with UI</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0010-ui-with-local-storage/README.md">0010 with localStorage</a></td>
   </tr>
 </table>
 
-# [0009 The simplest CRUD implementation with UI in separate files](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0005-simplest-with-ui/README.md)
+# [0009 The simplest CRUD implementation with UI in separate files](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0009-split-code-by-lang/README.md)
 
 ## What is this?
 
@@ -175,11 +175,12 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
+- [save/load to/from localStorage](../0010-ui-with-local-storage/README.md)
+- add other kinds of persistency
 - move records data to the DOM
 - make an Electron app out of it
 - add some CRUD functions
 - add CRUD methods
-- add persistency
 - scale up
 - add ids
 - add validation

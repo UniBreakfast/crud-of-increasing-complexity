@@ -1,11 +1,11 @@
 <table>
   <tr>
-    <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
+    <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
-    <td><a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>

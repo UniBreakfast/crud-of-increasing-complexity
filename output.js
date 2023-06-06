@@ -7,7 +7,7 @@ let result = '';
 function readDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   files.forEach(file => {
-    if (['.git', 'output.txt', 'output.js'].includes(file)) return;
+    if (['.git', 'output.txt', 'output.js', 'favicon.ico', 'crud.png'].includes(file)) return;
     const filePath = path.join(dirPath, file);
     if (fs.statSync(filePath).isDirectory()) {
       readDirectory(filePath);

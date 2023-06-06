@@ -15,7 +15,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0009-split-code-by-lang/README.md">0009 in separate files</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="../0009-split-code-by-lang/README.md">0009 in separate files</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>

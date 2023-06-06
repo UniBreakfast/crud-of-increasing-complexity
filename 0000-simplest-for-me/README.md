@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0011-simplest-object/README.md">0011 as an object</a></td>
+    <td><b>↱</b> <a href="../0011-simplest-object/README.md">0011 as an object</a> +1</td>
   </tr>
   <tr>
     <td></td>

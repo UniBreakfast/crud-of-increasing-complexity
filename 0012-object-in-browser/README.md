@@ -2,16 +2,20 @@
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0012-object-in-browser/README.md">0012 in a Browser</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0011 The simplest CRUD implementation as an object](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0011-simplest-object/README.md)
-# 
+# [0012 Simple CRUD object implementation in the browser](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0012-object-in-browser/README.md)
 
 ## What is this?
 
-This is the simplest CRUD implementation as an object. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) but instead of a JavaScript array it uses a simple JS object as a data structure for the records.
+This is a simple CRUD implementation for JavaScript in a browser. It is based on the [simple implementation as an object](../0011-simplest-object/README.md) which was not platform-specific. It's in memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 
@@ -26,7 +30,7 @@ I will not implement any other operations, like read individual items or delete 
 
 ## How to perform CRUD operations?
 
-There's no UI in this simplest implementation, so we'll have to use some kind of JavaScript REPL here. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
+There's no UI in this simplest implementation, so we'll have to use a browser console. I personally prefer Chrome DevTools console, but I won't use anything Chrome specific here. So to perform CRUD operations we'll input JavaScript code to our console to evaluate it.
 
 ### Create (one)
 
@@ -145,7 +149,6 @@ var nextKey = ${nextKey}`
 
 ## What's next?
 
-- [settle with Browser](../0012-object-in-browser/README.md)
 - add some CRUD functions
 - settle with NodeJS REPL
 - add CRUD methods

@@ -2,7 +2,7 @@
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0012-object-in-browser/README.md">0012 in a Browser</a> +1</td>
+    <td><b>↱</b> <a href="../0012-object-in-browser/README.md">0012 in a Browser</a> +2</td>
   </tr>
 </table>
 
@@ -135,7 +135,7 @@ And then you can compare the actual output with the expected output in the comme
 
 ## Persistency of data
 
-This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
+This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the object to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the object to one string and concatenate an initialization statement to make it really easy.
 
 ```js
 `var records = ${JSON.stringify(records)}

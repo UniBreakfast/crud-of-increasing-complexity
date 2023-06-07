@@ -5,22 +5,26 @@
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; &nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
+    <td>&nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0014-object-split-by-lang/README.md">0014 separating HTML, CSS, JS</a></td>
+    <td></td>
+  </tr>  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0013 Simple CRUD object implementation with UI](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0013-object-with-ui/README.md)
+# [0014 Simple CRUD object implementation with UI in separate files](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0014-object-split-by-lang/README.md)
 
 ## What is this?
 
-This is a simple CRUD object implementation for HTML, CSS and JS. It is based on the [simple object implementation in a browser](../0012-object-in-browser/README.md) and adds a UI to it removing the need to interact with the console or making any CRUD operations manually with code. It's in memory without any persistent storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
+This is a simple CRUD object implementation for HTML, CSS and JS. It is based on the [one-file implementation for the browser](../0013-object-with-ui/README.md) but this one is splitting the HTML, CSS, JS all into separate files. It's in memory without any persistent storage between runs for the sake of simplicity. Styling is minimal and not the focus of this implementation.
 
 ## What is CRUD?
 
@@ -114,19 +118,6 @@ To delete a string from the object as a property, user has to click the button w
     render()
   }
 
-  main.onclick = e => {
-    const btn = e.target.closest('button')
-    if (!btn) {
-      if (addForm.hidden) switchForms()
-      return
-    }
-    key = btn.dataset.key
-    if (editForm.hidden) switchForms()
-    else main.querySelector(':disabled').disabled = false
-    editInput.value = records[key]
-    main.querySelector(`[data-key="${key}"]`).disabled = true
-  }
-
   editForm.onsubmit = () => {
     const value = editInput.value.trim()
     if (!value) return
@@ -139,6 +130,19 @@ To delete a string from the object as a property, user has to click the button w
   removeBtn.onclick = () => {
     delete records[key]
     switchForms()
+  }
+
+  main.onclick = e => {
+    const btn = e.target.closest('button')
+    if (!btn) {
+      if (addForm.hidden) switchForms()
+      return
+    }
+    key = btn.dataset.key
+    if (editForm.hidden) switchForms()
+    else main.querySelector(':disabled').disabled = false
+    editInput.value = records[key]
+    main.querySelector(`[data-key="${key}"]`).disabled = true
   }
 
   onkeydown = e => {
@@ -163,11 +167,11 @@ To delete a string from the object as a property, user has to click the button w
 
 ## Testing
 
-You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0013-object-with-ui) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
+You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0014-object-split-by-lang) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
 
 ## Persistency of data
 
-This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the object to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the object to one string and concatenate an initialization statement to make it really easy.
+This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
 
 ```js
 `var records = ${JSON.stringify(records)}
@@ -177,12 +181,12 @@ var nextKey = ${nextKey}`
 
 ## What's next?
 
-- [separate HTML, CSS and JS](../0014-object-split-by-lang/README.md)
+- save/load to/from localStorage
+- add other kinds of persistency
 - move records data to the DOM
 - make an Electron app out of it
 - add some CRUD functions
 - add CRUD methods
-- add persistency
 - scale up
 - add ids
 - add validation

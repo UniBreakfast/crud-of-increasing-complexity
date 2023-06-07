@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0013-object-with-ui/README.md">0013 with user interface</a></td>
   </tr>
 </table>
 
@@ -15,7 +15,7 @@
 
 ## What is this?
 
-This is a simple CRUD implementation for JavaScript in a browser. It is based on the [simple implementation as an object](../0011-simplest-object/README.md) which was not platform-specific. It's in memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+This is a simple CRUD implementation for JavaScript object in a browser. It is based on the [simple implementation as an object](../0011-simplest-object/README.md) which was not platform-specific. It's in memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## What is CRUD?
 
@@ -149,6 +149,7 @@ var nextKey = ${nextKey}`
 
 ## What's next?
 
+- [add UI](../0013-object-with-ui/README.md)
 - add some CRUD functions
 - settle with NodeJS REPL
 - add CRUD methods

@@ -2,7 +2,7 @@
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0012-object-in-browser/README.md">0012 in a Browser</a> +2</td>
+    <td><b>↱</b> <a href="../0012-object-in-browser/README.md">0012 in a Browser</a> +3</td>
   </tr>
 </table>
 

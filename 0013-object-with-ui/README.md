@@ -12,7 +12,7 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0014-object-split-by-lang/README.md">0014 separating HTML, CSS, JS</a></td>
+    <td><b>↱</b> <a href="../0014-object-split-by-lang/README.md">0014 separating HTML, CSS, JS</a> +1</td>
   </tr>
 </table>
 
@@ -43,7 +43,7 @@ For that to happen the program will simply read all the strings from the object 
 
 ### Update (one)
 
-To update a string value in the object, user has to click the button with the string they want to update. Button will be disabled temporarily until the editing is finished. The string will be displayed in the input in the header. User can edit the string in the input and press Enter or click the 'save' button on the right. The input will be cleared and the string will be updated in the object. The string will be displayed in the list of strings below the input in the same place it was before. If the user changed their mind and doesn't want to update the string, they can press Esc or click the 'cancel' button on the right. The input will be cleared and the string will not be updated in the object.
+To update a string value in the object, user has to click the button with the string they want to update. Button will be disabled temporarily until the editing is finished. The string will be displayed in the input in the header. User can edit the string in the input and press Enter or click the 'save' button on the right. The input will be cleared and the string will be updated in the object. The updated string will be displayed in the list of strings below the input in the same place it was before. If the user changed their mind and doesn't want to update the string, they can press Esc or click the 'cancel' button on the right. The input will be cleared and the string will not be updated in the object.
 
 ### Delete (one)
 

@@ -16,7 +16,7 @@
   </tr>  <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0015-simple-with-indexdb/README.md">0015 with IndexedDB</a></td>
   </tr>
 </table>
 
@@ -47,7 +47,7 @@ For that to happen the program will simply read all the strings from the object 
 
 ### Update (one)
 
-To update a string value in the object, user has to click the button with the string they want to update. Button will be disabled temporarily until the editing is finished. The string will be displayed in the input in the header. User can edit the string in the input and press Enter or click the 'save' button on the right. The input will be cleared and the string will be updated in the object. The string will be displayed in the list of strings below the input in the same place it was before. If the user changed their mind and doesn't want to update the string, they can press Esc or click the 'cancel' button on the right. The input will be cleared and the string will not be updated in the object.
+To update a string value in the object, user has to click the button with the string they want to update. Button will be disabled temporarily until the editing is finished. The string will be displayed in the input in the header. User can edit the string in the input and press Enter or click the 'save' button on the right. The input will be cleared and the string will be updated in the object. The updated string will be displayed in the list of strings below the input in the same place it was before. If the user changed their mind and doesn't want to update the string, they can press Esc or click the 'cancel' button on the right. The input will be cleared and the string will not be updated in the object.
 
 ### Delete (one)
 
@@ -161,7 +161,7 @@ To delete a string from the object as a property, user has to click the button w
   }
   ```
 
-  Full source code is available in a file `index.html` [here](./index.html).
+  Full source code is available in this implementation folder.
 
 </details><br>
 
@@ -181,6 +181,7 @@ var nextKey = ${nextKey}`
 
 ## What's next?
 
+- [use IndexedDB for storage](../0015-simple-with-indexdb/README.md)
 - save/load to/from localStorage
 - add other kinds of persistency
 - move records data to the DOM

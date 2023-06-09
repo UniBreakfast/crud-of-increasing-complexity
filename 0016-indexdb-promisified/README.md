@@ -1,36 +1,36 @@
 <table>
   <tr>
-    <td><a href="../0000-simplest-for-me/README.md">0000 simplest</a> <b>↴</b></td>
+    <td>1 → <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
-    <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td></td>
   </tr>
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0014-object-split-by-lang/README.md">0014 separate files</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0016-indexdb-promisified/README.md">0016 promisify IndexedDB</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0015-simple-with-indexdb/README.md">0015 with indexedDB</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0015 CRUD implementation with UI and IndexedDB](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0015-simple-with-indexdb/README.md)
+# [0016 CRUD implementation with UI and promisified IndexedDB layer](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0016-indexdb-promisified/README.md)
 
 ## What is this?
 
-This is a CRUD implementation for a browser using IndexedDB. It is based on the [implementation made with a simple object](../0014-object-split-by-lang/README.md) but this one is replacing in memory object storage with a frontend database IndexedDB. Styling is minimal and not the focus of this implementation.
+This is a CRUD implementation for a browser using IndexedDB as a layer of abstraction. It is based on the [simple implementation with indexedDB](../0015-simple-with-indexdb/README.md) but this one is using promises. Styling is minimal and not the focus of this implementation.
 
 ## How to perform CRUD operations here?
 
@@ -110,54 +110,99 @@ To delete a string from the store, user has to click the button with the string 
   ```js
   let key
 
-  new Promise(resolve => {
-    indexedDB.open(dbName).onsuccess = function () {
-      let db = this.result
+  new Promise(resolve => indexedDB.open(dbName).onsuccess = ({ target: { result: db } }) => {
+    const proto = {
+      add(value) {
+        return new Promise(resolve => {
+          const t = db.transaction(this.stName, 'readwrite')
+          const req = t.objectStore(this.stName).add(value)
+          t.oncomplete = resolve
+        })
+      },
+
+      readEntries() {
+        return new Promise(resolve=> {
+          const t = db.transaction(this.stName, 'readonly')
+          const store = t.objectStore(this.stName)
+          const req = store.openCursor()
+          const entries = []
+
+          req.onsuccess = () => {
+            const cursor = req.result
+            if (cursor) {
+              entries.push({ key: cursor.key, value: cursor.value })
+              cursor.continue()
+            } else {
+              resolve(entries)
+            }
+          }
+        })
+      },
+
+      update(key, value) {
+        return new Promise(resolve=> {
+          const t = db.transaction(this.stName, 'readwrite')
+          const req = t.objectStore(this.stName).put(value, key)
+          t.oncomplete = resolve
+        })
+      },
+
+      delete(key) {
+        return new Promise(resolve=> {
+          const t = db.transaction(this.stName, 'readwrite')
+          const req = t.objectStore(this.stName).delete(key)
+          t.oncomplete = resolve
+        })
+      },
+    }
+
+    resolve(stName => new Promise(resolve=> {
+      if (db.objectStoreNames.contains(stName)) {
+        return resolve(Object.create(proto, { stName: { value: stName } }))
+      }
 
       const { version } = db
-
+      db.close()
       const req = indexedDB.open(dbName, version + 1)
 
       req.onupgradeneeded = e => {
         db = e.target.result
-        db.createObjectStore(stName, {autoIncrement: true})
-      }
-      req.onsuccess = () => resolve(db)
-    }
-  }).then(db => {
+        db.createObjectStore(stName, { autoIncrement: true });
+      };
+      req.onsuccess = () => resolve(Object.create(proto, { stName: { value: stName } }))
+    }))
+  }).then(async getStore => {
+    const recordsStore = await getStore(stName)
     render()
-    
-    addForm.onsubmit = () => {
-      const value = addInput.value.trim()
 
-      const t = db.transaction(stName, 'readwrite')
-      
-      t.objectStore(stName).add(value)
-      t.oncomplete = render
+    addForm.onsubmit = async () => {
+      const value = addInput.value.trim()
+      if (!value) return
+      await recordsStore.add(value)
+      render()
     }
 
-    editForm.onsubmit = () => {
+    editForm.onsubmit = async () => {
       const value = editInput.value.trim()
-
-      const t = db.transaction(stName, 'readwrite')
-      
-      t.objectStore(stName).put(value, key)
-      t.oncomplete = render
+      if (!value) return
+      await recordsStore.update(key, value)
       switchForms()
     }
 
     cancelBtn.onclick = switchForms
 
-    removeBtn.onclick = () => {
-      const t = db.transaction(stName, 'readwrite')
-      
-      t.objectStore(stName).delete(key)
-      t.oncomplete = render
+    removeBtn.onclick = async () => {
+      await recordsStore.delete(key)
       switchForms()
     }
 
     main.onclick = async e => {
       const btn = e.target.closest('button')
+
+      if (!btn) {
+        if (addForm.hidden) await switchForms()
+        return
+      }
 
       key = +btn.dataset.key
 
@@ -179,21 +224,9 @@ To delete a string from the store, user has to click the button with the string 
       await render()
     }
 
-    function render() {
-      return new Promise(resolve => {
-        const t = db.transaction(stName)
-        const keysReq = t.objectStore(stName).getAllKeys()
-        const valuesReq = t.objectStore(stName).getAll()
-        
-        t.oncomplete = () => {
-          const keys = keysReq.result
-          const values = valuesReq.result
-
-          main.innerHTML = keys.map((key, i) => `<button data-key="${key}">${values[i]}</button>`).reverse().join('')
-
-          resolve()
-        }
-      })
+    async function render() {
+      const entries = await recordsStore.readEntries()
+      main.innerHTML = entries.map(({ key, value }) => `<button data-key="${key}">${value}</button>`).reverse().join('')
     }
   })
   ```
@@ -204,11 +237,10 @@ To delete a string from the store, user has to click the button with the string 
 
 ## Testing
 
-You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0015-simple-with-indexdb) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
+You can test it manually by opening [the page](https://unibreakfast.github.io/crud-of-increasing-complexity/0016-indexdb-promisified) and performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
 
 ## What's next?
 
-- [promisify IndexedDB layer](../0016-indexdb-promisified/README.md)
 - make an Electron app out of it
 - add some CRUD functions
 - add CRUD methods

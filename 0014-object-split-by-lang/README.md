@@ -16,7 +16,7 @@
   </tr>  <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0015-simple-with-indexdb/README.md">0015 with IndexedDB</a></td>
+    <td><b>↱</b> <a href="../0015-simple-with-indexdb/README.md">0015 with IndexedDB</a> +1</td>
   </tr>
 </table>
 

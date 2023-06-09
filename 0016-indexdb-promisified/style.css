@@ -1,0 +1,23 @@
+:link, :visited {
+  color: unset;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+header,
+footer {
+  height: 96px;
+  background-color: #0009;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  height: calc(100vh - 96px - 96px);
+  overflow-y: auto;
+}

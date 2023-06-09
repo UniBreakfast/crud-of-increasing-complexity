@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0011-simplest-object/README.md">0011 as an object</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0013-object-with-ui/README.md">0013 with user interface</a> +2</td>
+    <td><b>↱</b> <a href="../0013-object-with-ui/README.md">0013 with user interface</a> +3</td>
   </tr>
 </table>
 

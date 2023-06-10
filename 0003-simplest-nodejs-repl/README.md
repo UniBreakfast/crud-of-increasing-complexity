@@ -1,5 +1,10 @@
 <table>
   <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0017-rest-api/README.md">0017 with REST API</a></td>
+  </tr>
+  <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0007-simple-nodejs-cli/README.md">0007 with CLI</a></td>
@@ -155,6 +160,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 ## What's next?
 
 - [add CLI](../0007-simple-nodejs-cli/README.md)
+- [add RESP API](../0017-rest-api/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency
@@ -163,7 +169,6 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 - add ids
 - add validation
 - make client-server
-- add API
 - add database
 - store to files
   

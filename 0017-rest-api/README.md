@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0003-simplest-nodejs-repl/README.md">0003 NodeJS REPL</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0018-ssr-page-ui/README.md">0018 with SSR page</a></td>
   </tr>
 </table>
 
@@ -183,14 +183,14 @@ And then you can compare the actual output with the expected output in the comme
 
 ## What's next?
 
+- [add SSR frontend page](../0018-ssr-page-ui/README.md)
+- add CSR frontend page
 - add some CRUD functions
 - add CRUD methods
 - add persistency
-- add UI
 - scale up
 - add ids
 - add validation
-- make client
 - add database
 - store to files
   

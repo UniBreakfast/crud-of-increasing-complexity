@@ -49,7 +49,6 @@ To update a string in the array, user has to click the button with the string th
 
 To delete a string from the array, user has to click the button with the string they want to delete. Button will be disabled temporarily until the deletion is finished. The string will be shown in the input above for editing. There's a 'remove' button on the left. If it is pressed the string will be deleted from the array. The list of buttons will update to show that.
 
-
 ## The implementation details
 
 <details>

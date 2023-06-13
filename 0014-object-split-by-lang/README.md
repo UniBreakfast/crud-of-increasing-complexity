@@ -12,7 +12,7 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0019-simple-with-websql/README.md">0019 with WebSQL</a></td>
   </tr>  <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0013-object-with-ui/README.md">0013 with UI</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
@@ -181,6 +181,7 @@ var nextKey = ${nextKey}`
 
 ## What's next?
 
+- [use WebSQL for storage](../0019-simple-with-websql/README.md)
 - [use IndexedDB for storage](../0015-simple-with-indexdb/README.md)
 - save/load to/from localStorage
 - add other kinds of persistency

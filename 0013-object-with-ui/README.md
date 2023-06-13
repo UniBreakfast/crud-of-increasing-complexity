@@ -12,7 +12,7 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; <a href="../0012-object-in-browser/README.md">0012 in a browser</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0014-object-split-by-lang/README.md">0014 separating HTML, CSS, JS</a> +2</td>
+    <td><b>↱</b> <a href="../0014-object-split-by-lang/README.md">0014 separating HTML, CSS, JS</a> +3</td>
   </tr>
 </table>
 

@@ -1,5 +1,10 @@
 <table>
   <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0020-with-methods/README.md">0020 switch to methods</a></td>
+  </tr>
+  <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0002-more-functions/README.md">0002 Add more CRUD functions</a></td>
@@ -62,29 +67,29 @@ deleteOneRecord('record 5 text')
 On top of [previous implementation](../0000-simplest-for-me/README.md), 
 <details><summary>this one adds four functions to perform CRUD operations.</summary><br>
 
-```js
-var records = []
+  ```js
+  var records = []
 
-function createOneRecord(str) {
-  records.push(str)
-}
+  function createOneRecord(str) {
+    records.push(str)
+  }
 
-function readAllRecords() {
-  return records
-}
+  function readAllRecords() {
+    return records
+  }
 
-function updateOneRecord(oldStr, newStr) {
-  const i = records.indexOf(oldStr)
+  function updateOneRecord(oldStr, newStr) {
+    const i = records.indexOf(oldStr)
 
-  if (i !== -1) records[i] = newStr
-}
+    if (i !== -1) records[i] = newStr
+  }
 
-function deleteOneRecord(str) {
-  const i = records.indexOf(str)
+  function deleteOneRecord(str) {
+    const i = records.indexOf(str)
 
-  if (i !== -1) records.splice(i, 1)
-}
-```
+    if (i !== -1) records.splice(i, 1)
+  }
+  ```
 
 </details><br>
 
@@ -137,7 +142,7 @@ function deleteOneRecord(str) {
 
 ### Improve Functionality
 - [Add more CRUD functions](../0002-more-functions/README.md)
-- Add CRUD methods
+- [Add CRUD methods](../0020-with-methods/README.md)
 - Add validation
 - Remove direct access to records
 

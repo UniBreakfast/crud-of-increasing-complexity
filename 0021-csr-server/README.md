@@ -12,19 +12,24 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0017-rest-api/README.md">0017 REST API</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0021-csr-server/README.md">0021 with CSR page</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0018-ssr-page-ui/README.md">0018 with SSR page</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0018 A basic one-file CRUD implementation with server side rendering](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0018-ssr-page-ui/README.md)
+# [0021 A primitive one-file CRUD implementation with client side rendering](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0021-csr-server/README.md)
 
 ## What is this?
 
-This is a basic CRUD implementation for NodeJS primitive user interface in a browser, rendered on the server side. It is based on the [simplest NodeJS implementation with REST API](../0017-rest-api/README.md) which was accessible only via API over HTTP(S) requests. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in server memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
+This is a basic CRUD implementation for NodeJS primitive user interface in a browser, rendered on the client side. It is based on the [basic NodeJS implementation with server side rendering](../0018-ssr-page-ui/README.md) which is still running from a single file. Although it is cumbersome endeavor. I'm most used to think in JavaScript and array methods, so I'm going to use them. It's in server memory without any persistent storage between runs for the sake of simplicity. Here, I will list the operations, describe how they are supposed to be performed, and provide their implementations.
 
 ## How to perform CRUD operations?
 
-To run this implementation you should have NodeJS installed. Run `node crud-ssr-server` in your terminal in the implementation folder.
+To run this implementation you should have NodeJS installed. Run `node crud-csr-server` in your terminal in the implementation folder.
 
 - Create (one): add a new string to the array
 - Read (all): get all strings from the array
@@ -58,29 +63,33 @@ To delete a string from the array, user has to click the button with the string 
   const records = []
 
   require('http').createServer(async (request, response) => {
-    const {method} = request
+    const {method, url} = request
     
     if (method == 'POST') {
       records.push(await getBody(request))
     }
 
     if (method == 'GET') {
+      if (url == '/records') return response.end(JSON.stringify(records))
+
       return response.end(`
         <head id="head">
           <script>
             let i
+
+            getAndShowRecords()
         
             onload = () => {
               addForm.onsubmit = async () => {
                 const value = addInput.value.trim()
                 await fetch('/', {method: 'POST', body: value})
-                location.reload()
+                getAndShowRecords()
               }
         
               main.onclick = e => {
                 const btn = e.target.closest('button')
                 i = +btn.dataset.i
-                if (editForm.hidden) switchForms()
+                if (editForm.hidden) switchForms(false)
                 else main.querySelector(':disabled').disabled = false
                 editInput.value = btn.textContent
                 btn.disabled = true
@@ -89,26 +98,32 @@ To delete a string from the array, user has to click the button with the string 
               editForm.onsubmit = async () => {
                 const value = editInput.value.trim()
                 await fetch('/', {method: 'PUT', body: JSON.stringify([i, value])})
-                location.reload()
+                switchForms()
               }
         
-              cancelBtn.onclick = switchForms
+              cancelBtn.onclick = () => switchForms(false)
         
               removeBtn.onclick = async () => {
                 await fetch('/', {method: 'DELETE', body: String(i)})
-                location.reload()
+                switchForms()
               }
             }
         
             onkeydown = e => {
-              if (e.key === 'Escape' && addForm.hidden) switchForms()
+              if (e.key === 'Escape' && addForm.hidden) switchForms(false)
             }
         
-            function switchForms() {
+            function switchForms(refresh = true) {
               addForm.hidden = !addForm.hidden
               editForm.hidden = !editForm.hidden
               const btn = main.querySelector(':disabled')
               if (btn) btn.disabled = false
+              if (refresh) getAndShowRecords()
+            }
+
+            async function getAndShowRecords() {
+              const records = await (await fetch('/records')).json()
+              main.innerHTML = records.map((str, i) => \`<button data-i="\${i}">\${str}</button>\`).reverse().join('')
             }
           </script>
           <style>...</style>
@@ -142,7 +157,7 @@ To delete a string from the array, user has to click the button with the string 
       const i = +(await getBody(request))
       records.splice(i, 1)
     }
-  }).listen(10018)
+  }).listen(10021)
 
   async function getBody(request) {
     let body = ''
@@ -151,19 +166,18 @@ To delete a string from the array, user has to click the button with the string 
   }
   ```
 
-  Full source code is the file [crud-ssr-server.js](crud-ssr-server.js) in this folder.
+  Full source code is the file [crud-csr-server.js](crud-csr-server.js) in this folder.
 
 </details><br>
 
 ## Testing
 
-To run this implementation you should have NodeJS installed. Run `node crud-ssr-server` in your terminal to start the server. Then you can open `http://localhost:10018`.
+To run this implementation you should have NodeJS installed. Run `node crud-csr-server` in your terminal to start the server. Then you can open `http://localhost:10021`.
 
   You can test it manually by performing CRUD operations as described above. By typing in the input and clicking the buttons or pressing the keys on the keyboard.
 
 ## What's next?
 
-- [switch to CSR by API](../0021-csr-server/README.md)
 - add some CRUD functions
 - add CRUD methods
 - add persistency

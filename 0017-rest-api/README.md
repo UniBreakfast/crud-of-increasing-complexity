@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0003-simplest-nodejs-repl/README.md">0003 NodeJS REPL</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0018-ssr-page-ui/README.md">0018 with SSR page</a></td>
+    <td><b>↱</b> <a href="../0018-ssr-page-ui/README.md">0018 with SSR page</a> +1</td>
   </tr>
 </table>
 
@@ -112,7 +112,6 @@ curl -X DELETE -d 'record 3 text updated' http://localhost:10017
     
     if (method == 'POST') {
       records.push(await getBody(req))
-      return resp.end()
     }
     if (method == 'GET') {
       return resp.end(JSON.stringify(records, null, 2))
@@ -121,15 +120,12 @@ curl -X DELETE -d 'record 3 text updated' http://localhost:10017
       const [oldRecord, newRecord] = JSON.parse(await getBody(req))
       const i = records.indexOf(oldRecord)
       if (i !== -1) records[i] = newRecord
-      return resp.end()
     }
     if (method == 'DELETE') {
       const i = records.indexOf(await getBody(req))
       if (i !== -1) records.splice(i, 1)
-      return resp.end()
     }
-    resp.end('unsupported method')
-  }).listen(10017, () => console.log('http://localhost:10017'))
+  }).listen(10017)
 
   async function getBody(req) {
     let body = ''

@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0017-rest-api/README.md">0017 with REST API</a> +1</td>
+    <td><b>↱</b> <a href="../0017-rest-api/README.md">0017 with REST API</a> +2</td>
   </tr>
   <tr>
     <td><a href="../0000-simplest-for-me/README.md">0000 simplest implementation</a> <b>↴</b></td>

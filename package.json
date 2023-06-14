@@ -1,0 +1,12 @@
+{
+  "name": "crud-of-increasing-complexity",
+  "version": "1.0.0",
+  "description": "A simple CRUD app that will increase in complexity as we go",
+  "main": "output.js",
+  "scripts": {
+    "start": "node 0003-simplest-nodejs-repl/crud-in-repl"
+  },
+  "keywords": ["crud", "education", "example"],
+  "author": "Mykhailo Ninin aka UniBreakfast",
+  "license": "ISC"
+}

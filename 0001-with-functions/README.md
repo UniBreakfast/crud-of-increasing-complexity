@@ -2,6 +2,11 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0022-arr-of-objects-funcs/README.md">0022 to array of objects</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0020-with-methods/README.md">0020 switch to methods</a></td>
   </tr>
   <tr>
@@ -152,6 +157,7 @@ On top of [previous implementation](../0000-simplest-for-me/README.md),
 - Add feedback (consider different types of feedback, such as validation errors)
 
 ### Enhance Data Management
+- [Switch to array of objects](../0022-arr-of-objects-funcs/README.md)
 - Add persistency
 - Add ids to records
 - Store data to files

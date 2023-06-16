@@ -11,7 +11,7 @@
   </tr>
 </table>
 
-# [0002 The simple CRUD implementation with more functions](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0002-more-functions/README.md)
+# [0002 A simple CRUD implementation with more functions](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0002-more-functions/README.md)
 
 ## What is this?
 

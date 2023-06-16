@@ -2,6 +2,11 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
+    <td><b>↱</b> <a href="../0023-ordered-with-funcs/README.md">0023 to ordered array</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
     <td><b>↱</b> <a href="../0022-arr-of-objects-funcs/README.md">0022 to array of objects</a></td>
   </tr>
   <tr>
@@ -157,6 +162,7 @@ On top of [previous implementation](../0000-simplest-for-me/README.md),
 - Add feedback (consider different types of feedback, such as validation errors)
 
 ### Enhance Data Management
+- [Add order to records](../0023-ordered-with-funcs/README.md)
 - [Switch to array of objects](../0022-arr-of-objects-funcs/README.md)
 - Add persistency
 - Add ids to records

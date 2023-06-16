@@ -20,8 +20,6 @@ require('http').createServer(async (request, response) => {
         <link rel="icon" href="data:">
         <script>
           let i
-
-          getAndShowRecords()
       
           onload = () => {
             addForm.onsubmit = async () => {

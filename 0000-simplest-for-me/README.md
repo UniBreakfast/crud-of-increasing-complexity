@@ -17,7 +17,7 @@
   <tr>
     <td><a href="../README.md">The idea of CRUD</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a> +3</td>
+    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a> +4</td>
   </tr>
 </table>
 

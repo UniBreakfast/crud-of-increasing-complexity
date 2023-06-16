@@ -4,7 +4,13 @@
   "description": "A simple CRUD app that will increase in complexity as we go",
   "main": "output.js",
   "scripts": {
-    "start": "node 0003-simplest-nodejs-repl/crud-in-repl"
+    "start": "node 0003-simplest-nodejs-repl/crud-in-repl",
+    "0003": "node 0003-simplest-nodejs-repl/crud-in-repl",
+    "0007": "node 0007-simple-nodejs-cli/cli",
+    "0008": "electron 0008-simple-electron-app",
+    "0017": "node 0017-rest-api/crud-rest-api",
+    "0018": "node 0018-ssr-page-ui/crud-ssr-server",
+    "0021": "node 0021-csr-server/crud-csr-server"
   },
   "keywords": ["crud", "education", "example"],
   "author": "Mykhailo Ninin aka UniBreakfast",

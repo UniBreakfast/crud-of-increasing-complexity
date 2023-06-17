@@ -249,6 +249,14 @@ deleteAllRecords()
   And then you can compare the actual output with the expected output in the comments.
 </details><br>
 
+## Persistency of data
+
+This implementation is in memory, so it's not persistent between runs. If you want to persist the data, you can copy the array to any kind of persistent storage and paste it back at any point in time or on the next run. You can use `JSON.stringify` to convert the array to one string and concatenate an initialization statement to make it really easy.
+
+```js
+'var records = ' + JSON.stringify(records) // 'var records = ["record 1 text","record 3 text updated"]'
+```
+
 ## What's next?
 
 ### Improve Functionality

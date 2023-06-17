@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0023-ordered-with-funcs/README.md">0023 to ordered array</a></td>
+    <td><b>↱</b> <a href="../0023-ordered-with-funcs/README.md">0023 to ordered array</a> +1</td>
   </tr>
   <tr>
     <td></td>

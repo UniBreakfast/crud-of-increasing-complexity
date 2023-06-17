@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td></td>
+    <td><b>↱</b> <a href="../0024-ordered-groups/README.md">0024 to ordered groups</a></td>
   </tr>
 </table>
 
@@ -201,6 +201,7 @@ deleteOneRecord(findOneRecord('record 2 text updated'))
 - Add feedback (consider different types of feedback, such as validation errors)
 
 ### Enhance Data Management
+- [Advance to a group dictionary with arrays of records](../0024-ordered-groups/README.md)
 - Switch to array of objects
 - Add persistency
 - Add ids to records

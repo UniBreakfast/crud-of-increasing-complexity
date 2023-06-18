@@ -17,7 +17,7 @@
   <tr>
     <td><a href="../README.md">The idea of CRUD</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a> +5</td>
+    <td><b>↱</b> <a href="../0001-with-functions/README.md">0001 with basic functions</a> +6</td>
   </tr>
 </table>
 
@@ -187,6 +187,7 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 
 ## What's next?
 
+- [switch to objects](../0011-simplest-object/README.md)
 - [add some CRUD functions](../0001-with-functions/README.md)
 - [settle with NodeJS REPL](../0003-simplest-nodejs-repl/README.md)
 - [settle with Browser](../0004-simplest-in-browser/README.md)

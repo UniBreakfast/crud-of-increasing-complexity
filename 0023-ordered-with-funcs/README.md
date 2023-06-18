@@ -7,7 +7,7 @@
   <tr>
     <td>&nbsp; &nbsp; <a href="../0001-with-functions/README.md">0001 with 4 functions</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0024-ordered-groups/README.md">0024 to ordered groups</a></td>
+    <td><b>↱</b> <a href="../0024-ordered-groups/README.md">0024 to ordered groups</a> +1</td>
   </tr>
 </table>
 
@@ -15,9 +15,9 @@
 
 ## What is this?
 
-This is a simple CRUD implementation with functions for an ordered list of strings. It is based on the [previous simplest one](../0001-with-functions/README.md) but this time the order is important. So we can specify the position of the record we add, update or delete. We can find the position of a record by its string. And we can move a record to a different position.
+This is a simple CRUD implementation with functions for an ordered list of strings. It is based on the [previous simplest one](../0001-with-functions/README.md) but this time the order is important. So we can specify the position of the record we add, update or delete. We can find the position of a record by its string. And we can move a record to a different position. There are six functions to perform all that.
 
-## How to use these?
+## How to use these functions?
 
 To use these functions, you need to call them with the appropriate arguments. You can use any JavaScript REPL to do that. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
 

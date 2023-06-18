@@ -91,7 +91,7 @@ to operate on it we'll need to use the snippets like the ones above, of course.
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy, paste into your REPL of choice and evaluate this code:</summary><br>
+  <summary>To test these examples you can copy them, paste into your browser Developer Tools console and evaluate this code:</summary><br>
 
 ```js
 console.log('// Implementation initialization')

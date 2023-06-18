@@ -12,19 +12,24 @@
   <tr>
     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="../0023-ordered-with-funcs/README.md">0023 ordered array</a> <b>↴</b></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0025-ord-groups-in-browser/README.md">0025 in a browser</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a href="../0024-ordered-groups/README.md">0024 ordered groups of arrays</a> <b>↴</b></td>
+    <td>&nbsp; &nbsp; &nbsp;</td>
+    <td></td>
   </tr>
 </table>
 
-# [0024 An ordered list of groups of ordered records CRUD implementation with functions](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0024-ordered-groups/README.md)
+# [0025 An ordered list of groups of ordered records CRUD implementation with functions in browser](https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0025-ord-groups-in-browser/README.md)
 
 ## What is this?
 
-This is a CRUD implementation with functions for an ordered list of groups of ordered strings. It's basically a two-level ordered list. It is based on the previous [ordered list of strings implementation](../0023-ordered-with-funcs/README.md) but this time there is a higher level of gouping and ordering. So we can specify the group we want our record to be in and the position of the record we add, update or delete. We can find the position of a group by it's name or a record by its string. And we can move a group or a record to a different position. There are twelve functions for that.
+This is a CRUD implementation with functions for an ordered list of groups of ordered strings. It's basically a two-level ordered list. It is based on the previous [non-platform-specific implementation](../0024-ordered-groups/README.md) but this one is for a browser. Still we can specify the group we want our record to be in and the position of the record we add, update or delete. We can find the position of a group by it's name or a record by its string. And we can move a group or a record to a different position. It's only that now we can use the browser console to perform CRUD operations with our twelve special functions.
 
 ## How to use these functions?
 
-To use these functions, you need to call them with the appropriate arguments. You can use any JavaScript REPL to do that. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
+There's no UI in this implementation, so we'll have to use a browser console. I personally prefer Chrome DevTools console, but I won't use anything Chrome specific here. So to perform CRUD operations we'll input JavaScript code to our console to evaluate it.
 
 ### Groups
 
@@ -191,7 +196,9 @@ deleteOneRecord('group 3', 5) // this will not delete anything
 
 ## The implementation details
 
-<details><summary>Previous implementation was extended geatly to work with groups.</summary><br>
+<details><summary>It's basically the same implementations that was previously. Only an html page was added to use it in a browser console. There's nothing on that page but the guide on how to open the console and input functions calls.</summary><br>
+
+  ### JS
 
   ```js
   const { keys, values, entries, fromEntries } = Object
@@ -310,7 +317,7 @@ deleteOneRecord('group 3', 5) // this will not delete anything
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy the implementation code above, paste into your REPL of choice and evaluate. And then add and run this code:</summary><br>
+  <summary>To test these examples you can copy them, paste into your browser Developer Tools console and evaluate this code:</summary><br>
   
   ```js
   console.log("createOneGroup('group 1')")
@@ -463,7 +470,6 @@ This implementation is in memory, so it's not persistent between runs. If you wa
 - Remove direct access to records
 
 ### Enhance Interaction
-- [Settle in the browser](../0025-ordered-groups-browser/README.md)
 - Add UI (think about which frameworks you might want to use)
 - Add CLI
 - Add feedback (consider different types of feedback, such as validation errors)

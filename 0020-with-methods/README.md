@@ -17,7 +17,7 @@
 
 This is the simplest CRUD implementation (for me) with methods. It is based on the [simplest implementation with functions](../0001-with-functions/README.md) and it changes four functions to be records array methods instead. They are still perform CRUD operations.
 
-## How to use these?
+## How to use these methods?
 
 To use these methods, you need to call them with the appropriate arguments. You can use any JavaScript REPL to do that. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
 

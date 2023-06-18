@@ -2,7 +2,7 @@
   <tr>
     <td></td>
     <td>&nbsp; &nbsp; &nbsp;</td>
-    <td><b>↱</b> <a href="../0023-ordered-with-funcs/README.md">0023 to ordered array</a> +1</td>
+    <td><b>↱</b> <a href="../0023-ordered-with-funcs/README.md">0023 to ordered array</a> +2</td>
   </tr>
   <tr>
     <td></td>
@@ -27,7 +27,7 @@
 
 This is the simplest CRUD implementation (for me) with functions. It is based on the [simplest implementation](../0000-simplest-for-me/README.md) and it adds four obvious functions to perform CRUD operations. If unsure what to make of it start [there](../0000-simplest-for-me/README.md).
 
-## How to use these?
+## How to use these functions?
 
 To use these functions, you need to call them with the appropriate arguments. You can use any JavaScript REPL to do that. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
 

@@ -17,7 +17,7 @@
 
 This is a simple CRUD implementation with functions. It is based on the [array of strings implementation](../0001-with-functions/README.md) but it moves to objects in the array instead of strings. And the functions are changed to work with these objects instead of strings.
 
-## How to use these?
+## How to use these functions?
 
 To use these functions, you need to call them with the appropriate arguments. You can use any JavaScript REPL to do that. It can be a browser console, Node.js REPL or any kind of JavaScript sandbox offline or online. I personally prefer Chrome DevTools console, but I won't use anything browser specific here. So to perform CRUD operations we'll input JavaScript code to our runtime of choice to evaluate it.
 

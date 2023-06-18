@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <link rel="icon" href="favicon.ico">
+
+  <script src="order-with-funcs.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <title>CRUD with ordered groups of ordered lists</title>
+</head>
+
+<body id="body">
+  <h1>
+    <pre>
+    Open console with Ctrl + Shift + I
+    
+    And manipulate record groups from there
+    with function calls like these:
+    </pre>
+  </h1>
+  <pre>    createOneGroup(name, pos)
+    readAllGroups(withRecords, indexed)
+    updateOneGroup(name, newName)
+    deleteOneGroup(name)
+    findOneGroup(name)
+    moveOneGroup(from, to)
+    
+    createOneRecord(groupName, recordName, pos)
+    readAllRecords(groupName, indexed)
+    updateOneRecord(groupName, recordName, newRecordName)
+    deleteOneRecord(groupName, recordName)
+    findOneRecord(groupName, recordName)
+    moveOneRecord(groupName, from, to)
+
+    !!! not available on mobile !!!</pre>
+  <pre>       <a href="https://github.com/UniBreakfast/crud-of-increasing-complexity/blob/master/0025-ord-groups-in-browser/README.md">project details on GitHub</a></pre>
+</body>
+
+</html>

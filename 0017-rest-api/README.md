@@ -153,7 +153,7 @@ curl -X DELETE -d 'record 3 text updated' http://localhost:10017
   }).then(() => {
     return fetch('/', { method: 'POST', body: 'record 3 text'})
   }).then(() => {
-    return fetch('/', { method: 'UPDATE', body: JSON.stringify(['record 1 text', 'record 1 text updated']) })
+    return fetch('/', { method: 'PUT', body: JSON.stringify(['record 1 text', 'record 1 text updated']) })
   }).then(() => {
     return fetch('/', { method: 'DELETE', body: 'record 2 text' })
   }).then(() => {

@@ -317,7 +317,7 @@ deleteOneRecord('group 3', 5) // this will not delete anything
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy them, paste into your browser Developer Tools console and evaluate this code:</summary><br>
+  <summary>You can test it manually by opening <a href="https://unibreakfast.github.io/crud-of-increasing-complexity/0025-ord-groups-in-browser">the page</a> and then you can copy the code below, paste into your browser Developer Tools console and evaluate this code:</summary><br>
   
   ```js
   console.log("createOneGroup('group 1')")

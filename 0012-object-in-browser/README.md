@@ -91,7 +91,7 @@ to operate on it we'll need to use the snippets like the ones above, of course.
 ## Testing
 
 <details>
-  <summary>To test these examples you can copy them, paste into your browser Developer Tools console and evaluate this code:</summary><br>
+  <summary>You can test it manually by opening <a href="https://unibreakfast.github.io/crud-of-increasing-complexity/0012-object-in-browser">the page</a> and then you can copy the code below, paste into your browser Developer Tools console and evaluate this code:</summary><br>
 
 ```js
 console.log('// Implementation initialization')
